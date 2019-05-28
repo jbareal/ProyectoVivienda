@@ -2,7 +2,7 @@ package hospedaje;
 
 import tipos.TpPAGO;
 
-public class Hospedaje {
+public abstract class Hospedaje {
 	
 	private TpPAGO TipoPAGO;
 
@@ -20,11 +20,14 @@ public class Hospedaje {
 	public void setTipoPAGO(TpPAGO tipoPAGO) {
 		TipoPAGO = tipoPAGO;
 	}
+	public abstract Integer getPrecioMedio();
+
 	@Override
 	public String toString() {
-		return "Hospedaje [TipoPAGO=" + TipoPAGO + ", getTipoPAGO()=" + getTipoPAGO() + "]";
-
+		return "Hospedaje [TipoPAGO=" + TipoPAGO + ", getTipoPAGO()=" + getTipoPAGO() + ", getPrecioMedio()="
+				+ getPrecioMedio() + "]";
 	}
+	
 	
 }
 
