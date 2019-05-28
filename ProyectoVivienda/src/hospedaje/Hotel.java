@@ -11,7 +11,7 @@ public class Hotel extends Hospedaje {
 	}
 
 	public Hotel(String numCatastro, TpPAGO tipoPAGO,Integer numHabitaciones, Integer numComedores) {
-		super();
+		super(numCatastro,tipoPAGO);
 		this.numHabitaciones = numHabitaciones;
 		this.numComedores = numComedores;
 		}
