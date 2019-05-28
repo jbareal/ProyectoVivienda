@@ -26,5 +26,4 @@ public class OpcionesMenu {
 		System.out.println("Has escogido listar vivienda");
 		}
 		
-
 }

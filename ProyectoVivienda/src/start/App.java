@@ -13,7 +13,6 @@ public class App {
 			opcion = Teclado.pideDatoEntero("Opción(0-Salir):");
 			ejecutarOpcion(opcion);
 		} while (opcion != 0);
-
 	}
 
 	private static void ejecutarOpcion(int opcion) {
