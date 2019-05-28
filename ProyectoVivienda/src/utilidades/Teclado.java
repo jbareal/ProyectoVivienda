@@ -38,5 +38,4 @@ public class Teclado {
 		return Double.parseDouble(respuesta);
 	}
 
-
 }

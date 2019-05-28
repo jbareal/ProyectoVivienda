@@ -5,6 +5,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		/*int opcion = 0;
+		 * 
 		do {
 			mostrarMenu();
 			opcion = Teclado.pideDatoEntero("Opción(0-Salir):");
