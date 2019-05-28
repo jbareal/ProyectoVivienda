@@ -1,15 +1,17 @@
 package hospedaje;
 
 import tipos.TpPAGO;
+import vivienda.Vivienda;
 
-public abstract class Hospedaje {
+public abstract class Hospedaje extends Vivienda {
 	
 	private TpPAGO TipoPAGO;
 
 	public Hospedaje() {
 	}
 
-	public Hospedaje(TpPAGO tipoPAGO) {
+	public Hospedaje(String numCatastro, TpPAGO tipoPAGO) {
+		super(numCatastro);
 		this.TipoPAGO = tipoPAGO;
 	}
 
