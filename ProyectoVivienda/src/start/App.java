@@ -1,11 +1,13 @@
 package start;
 
+import utilidades.Teclado;
+
 public class App {
 
 	public static void main(String[] args) {
 		
-		/*int opcion = 0;
-		 * 
+		int opcion = 0;
+		
 		do {
 			mostrarMenu();
 			opcion = Teclado.pideDatoEntero("Opción(0-Salir):");
@@ -17,15 +19,13 @@ public class App {
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
 		case 1:
-			Estructurados.intercambio();
+			OpcionesMenu.aniadirVivienda();
 			break;
-		case 2:Estructurados.potencia();break;
-		case 3: Estructurados.dado(); break;
-		case 4: Estructurados.quiniela(); break;
+		case 2:OpcionesMenu.modificarVivienda();break;
+		case 3: OpcionesMenu.borrarVivienda(); break;
+		case 4: OpcionesMenu.listarVivienda(); break;
 		}
 	}
-	
-	CAMBIAR LOS NOMBRES DE LOS CASOS
 	
 
 	private static void mostrarMenu() {
@@ -35,8 +35,6 @@ public class App {
 		System.out.println("3.Borrar una vivienda.");
 		System.out.println("4.Listar el contenido de viviendas.");
 	}
-*/
-
-	}
 
 }
+
