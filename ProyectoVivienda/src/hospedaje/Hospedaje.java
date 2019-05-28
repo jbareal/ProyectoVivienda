@@ -12,7 +12,7 @@ public abstract class Hospedaje extends Vivienda {
 
 	public Hospedaje(String numCatastro, TpPAGO tipoPAGO) {
 		super(numCatastro);
-		this.TipoPAGO = tipoPAGO;
+		setTipoPAGO(TpPAGO tipoPAGO);
 	}
 
 	public TpPAGO getTipoPAGO() {
@@ -20,13 +20,13 @@ public abstract class Hospedaje extends Vivienda {
 	}
 
 	public void setTipoPAGO(TpPAGO tipoPAGO) {
-		TipoPAGO = tipoPAGO;
+		this.TipoPAGO = tipoPAGO;
 	}
 	public abstract Integer getPrecioMedio();
 
 	@Override
 	public String toString() {
-		return "Hospedaje [TipoPAGO=" + TipoPAGO + ", getTipoPAGO()=" + getTipoPAGO() + ", getPrecioMedio()="
+		return "Hospedaje [ getTipoPAGO()=" + getTipoPAGO() + ", getPrecioMedio()="
 				+ getPrecioMedio() + "]";
 	}
 	
