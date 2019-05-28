@@ -12,7 +12,7 @@ public abstract class Hospedaje extends Vivienda {
 
 	public Hospedaje(String numCatastro, TpPAGO tipoPAGO) {
 		super(numCatastro);
-		setTipoPAGO(TpPAGO tipoPAGO);
+		this.TipoPAGO = tipoPAGO;
 	}
 
 	public TpPAGO getTipoPAGO() {
