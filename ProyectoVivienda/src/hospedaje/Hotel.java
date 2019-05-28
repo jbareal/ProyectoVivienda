@@ -44,6 +44,4 @@ public class Hotel extends Hospedaje {
 				+ ", getPrecioMedio()=" + getPrecioMedio() + "]";
 	}
 	
-	
-
 }
