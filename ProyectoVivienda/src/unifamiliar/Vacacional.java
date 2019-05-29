@@ -51,14 +51,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	public void setDistanciaPlaya(Integer distanciaPlaya) {
 		this.distanciaPlaya = distanciaPlaya;
 	}
-
-	@Override
-	public String toString() {
-		
-		return "Vacacional [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() +   ", DiasOcupado =" +getDiasOcupado()+ ", DistanciaPlaya()=" + getDistanciaPlaya()+"]";
-		
-	}
-
+	
 	public TpEPO getTipoEPO() {
 		return tipoEPO;
 	}
@@ -68,8 +61,24 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	}
 
 
+	@Override
+	public String toString() {
 		
-	
+		return "Vacacional [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() +   ", DiasOcupado =" +getDiasOcupado()+ ", DistanciaPlaya()=" + getDistanciaPlaya()+"]";
+		
+	}
+
+	@Override
+	public TpEPO getEpoca() {
+		// TODO Auto-generated method stub
+		return tipoEPO ;
+	}
+
+	@Override
+	public void setEpoca(TpEPO tipoEPO) {
+	  this.tipoEPO = tipoEPO;
+		
+	}
 
 
 	
