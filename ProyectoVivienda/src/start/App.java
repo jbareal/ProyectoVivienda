@@ -1,10 +1,7 @@
 package start;
 
-import opcionesMenu.AniadirVivienda;
-import opcionesMenu.BorrarVivienda;
-import opcionesMenu.ListarVivienda;
-import opcionesMenu.ModificarVivienda;
 
+import opcionesMenu.OpcionesMenu;
 import utilidades.Teclado;
 
 public class App {
@@ -18,15 +15,15 @@ public class App {
 			opcion = Teclado.pideDatoEntero("5. Opción Salir:");
 			ejecutarOpcion(opcion);
 		} while (opcion != 5);
-		System.out.println("Ha salido del programa");
+		System.out.println("Has salido del programa");
 	}
 
 	private static void ejecutarOpcion(int opcion){
 		switch (opcion) {
-		case 1: AniadirVivienda.aniadirVivienda(); break;
-		case 2: ModificarVivienda.modificarVivienda(); break;
-		case 3: BorrarVivienda.borrarVivienda(); break;
-		case 4: ListarVivienda.listarVivienda(); break;
+		case 1: OpcionesMenu.aniadirVivienda(); break;
+		case 2: OpcionesMenu.modificarVivienda(); break;
+		case 3: OpcionesMenu.borrarVivienda(); break;
+		case 4: OpcionesMenu.listarVivienda(); break;
 		}
 	}
 	
