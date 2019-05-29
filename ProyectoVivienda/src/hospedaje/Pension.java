@@ -6,22 +6,23 @@ import tipos.TpPAGO;
 
 public class Pension extends Hospedaje implements Informacion {
 
-	private String opcionViajeros;
+	private String opinionViajeros;
 	private Integer paxPorHabitacion;
 	private TpEPO tipoEPO; 
+	private TpPAGO tipoPAGO;
 	
 	public Pension() {
 	}
-	public Pension(TpPAGO TipoPAGO, String numCatastro, String opcionViajeros, Integer paxPorHabitacion) {
-		super(numCatastro, TipoPAGO);
-		this.opcionViajeros = opcionViajeros;
+	public Pension(String numCatastro,TpPAGO tipoPAGO, String opinionViajeros, Integer paxPorHabitacion) {
+		super(numCatastro, tipoPAGO);
+		this.opinionViajeros = opinionViajeros;
 		this.paxPorHabitacion = paxPorHabitacion;
 	}
-	public String getOpcionViajeros() {
-		return opcionViajeros;
+	public String getOpinionViajeros() {
+		return opinionViajeros;
 	}
 	public void setOpcionViajeros(String opcionViajeros) {
-		this.opcionViajeros = opcionViajeros;
+		this.opinionViajeros = opcionViajeros;
 	}
 	public Integer getPaxPorHabitacion() {
 		return paxPorHabitacion;
@@ -31,14 +32,15 @@ public class Pension extends Hospedaje implements Informacion {
 	}
 	@Override
 	public Integer getPrecioMedio() {
-		// TODO Auto-generated method stub
-		return null;
+		return (paxPorHabitacion*3)/2;
 	}
+	
 	@Override
 	public String toString() {
-		return "Pension [opcionViajeros=" + opcionViajeros + ", paxPorHabitacion=" + paxPorHabitacion
-				+ ", getOpcionViajeros()=" + getOpcionViajeros() + ", getPaxPorHabitacion()=" + getPaxPorHabitacion()
-				+ ", getPrecioMedio()=" + getPrecioMedio() + "]";
+		return "Pension [opinionViajeros=" + opinionViajeros + ", paxPorHabitacion=" + paxPorHabitacion + ", tipoEPO="
+				+ tipoEPO + ", tipoPAGO=" + tipoPAGO + ", getOpinionViajeros()=" + getOpinionViajeros()
+				+ ", getPaxPorHabitacion()=" + getPaxPorHabitacion() + ", getPrecioMedio()=" + getPrecioMedio()
+				+ ", getEpoca()=" + getEpoca() + ", getTipoPAGO()=" + getTipoPAGO() + "]";
 	}
 	@Override
 	public TpEPO getEpoca() {
@@ -50,6 +52,14 @@ public class Pension extends Hospedaje implements Informacion {
 		this.tipoEPO= tipoEPO;
 		
 	}
+	public TpPAGO getTipoPAGO() {
+		return tipoPAGO;
+	}
+	public void setTipoPAGO(TpPAGO tipoPAGO) {
+		this.tipoPAGO = tipoPAGO;
+	}
+	
+	
 	
 	
 	
