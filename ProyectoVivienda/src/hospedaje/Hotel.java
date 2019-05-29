@@ -1,17 +1,19 @@
 package hospedaje;
 
 import interfaces.Informacion;
+import tipos.TpEPO;
 import tipos.TpPAGO;
 
 public class Hotel extends Hospedaje implements Informacion{
 	
 	private Integer numHabitaciones;
 	private Integer numComedores;
+	private TpEPO tipoEPO; 
 
 	public Hotel() {
 	}
 
-	public Hotel(String numCatastro, TpPAGO tipoPAGO,Integer numHabitaciones, Integer numComedores) {
+	public Hotel(String numCatastro, TpPAGO tipoPAGO,Integer numHabitaciones, Integer numComedores, TpEPO tipoEPO) {
 		super(numCatastro,tipoPAGO);
 		this.numHabitaciones = numHabitaciones;
 		this.numComedores = numComedores;
@@ -43,6 +45,18 @@ public class Hotel extends Hospedaje implements Informacion{
 		return "Hotel [numHabitaciones=" + numHabitaciones + ", numComedores=" + numComedores
 				+ ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()=" + getNumComedores()
 				+ ", getPrecioMedio()=" + getPrecioMedio() + "]";
+	}
+
+	@Override
+	public TpEPO getEpoca() {
+		// TODO Auto-generated method stub
+		return tipoEPO;
+	}
+
+	@Override
+	public void setEpoca(TpEPO tipoEPO) {
+		this.tipoEPO =tipoEPO;
+		
 	}
 	
 }

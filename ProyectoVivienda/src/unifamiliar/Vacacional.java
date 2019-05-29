@@ -2,6 +2,7 @@ package unifamiliar;
 
 
 import interfaces.Informacion;
+import tipos.TpEPO;
 import unifamiliar.Unifamiliar;
 
 /**
@@ -13,6 +14,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
     
 	private Integer diasOcupado; 
 	private Integer distanciaPlaya;
+	private TpEPO tipoEPO; 
 	
 	public Vacacional() {
 		super();
@@ -28,7 +30,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	 * @param distanciaPlaya
 	 */
 	
-	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanaciaPlaya) {
+	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanaciaPlaya, TpEPO tipoEPO) {
 		super(numCatastro, superficie, numAireAcond);
 		setDiasOcupado(diasOcupado);
 		setDistanciaPlaya(distanciaPlaya);
@@ -56,6 +58,18 @@ public class Vacacional extends Unifamiliar implements Informacion{
 		return "Vacacional ["+ text + "getDiasOcupado()= " + getDiasOcupado() + ", getDistanciaPlaya()=" + getDistanciaPlaya()+"]";
 				
 	}
+
+	@Override
+	public TpEPO getEpoca() {
+		return tipoEPO;
+	}
+
+	@Override
+	public void setEpoca(TpEPO tipoEPO) {
+		this.tipoEPO = tipoEPO;
+		
+	}
+
 
 	
 }
