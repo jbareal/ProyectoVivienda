@@ -9,7 +9,7 @@ import unifamiliar.Unifamiliar;
  *
  */
 
-public class Vacacional extends Unifamiliar implements Informacion {
+public class Vacacional extends Unifamiliar implements Informacion{
     
 	private Integer diasOcupado; 
 	private Integer distanciaPlaya;

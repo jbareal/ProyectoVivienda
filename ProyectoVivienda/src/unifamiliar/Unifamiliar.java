@@ -20,7 +20,6 @@ public class Unifamiliar extends Vivienda {
 	 */
 	public Unifamiliar() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
