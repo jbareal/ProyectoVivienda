@@ -30,7 +30,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	 * @param distanciaPlaya
 	 */
 	
-	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanaciaPlaya, TpEPO tipoEPO) {
+	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanaciaPlaya) {
 		super(numCatastro, superficie, numAireAcond);
 		setDiasOcupado(diasOcupado);
 		setDistanciaPlaya(distanciaPlaya);
@@ -58,6 +58,17 @@ public class Vacacional extends Unifamiliar implements Informacion{
 
 	public void setTipoEPO(TpEPO tipoEPO) {
 		this.tipoEPO = tipoEPO;
+	}
+
+	@Override
+	public TpEPO getEpoca() {
+		return tipoEPO;
+	}
+
+	@Override
+	public void setEpoca(TpEPO tipoEPO) {
+		this.tipoEPO= tipoEPO;
+		
 	}
 
 
