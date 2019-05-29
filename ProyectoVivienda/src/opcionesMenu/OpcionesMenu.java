@@ -1,7 +1,9 @@
 package opcionesMenu;
 
-public class OpcionesMenu {
 
+
+public class OpcionesMenu {
+	
 	public static void aniadirVivienda() {
 		
 		
@@ -21,7 +23,9 @@ public class OpcionesMenu {
 	}
 
 	public static void listarVivienda() {
-	
+		
+	//HAy que hacer modificaciones.	List <Vivienda> lstViviendas = new ArrayList<>();
+				
 		
 		System.out.println("Has escogido listar el contenido de vivienda");
 	}

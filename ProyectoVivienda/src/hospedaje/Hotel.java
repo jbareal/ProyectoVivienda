@@ -13,7 +13,7 @@ public class Hotel extends Hospedaje implements Informacion{
 	public Hotel() {
 	}
 
-	public Hotel(String numCatastro, TpPAGO tipoPAGO,Integer numHabitaciones, Integer numComedores) {
+	public Hotel(String numCatastro,TpPAGO tipoPAGO, Integer numHabitaciones, Integer numComedores) {
 		super(numCatastro,tipoPAGO);
 		this.numHabitaciones = numHabitaciones;
 		this.numComedores = numComedores;
