@@ -47,13 +47,12 @@ public class Unifamiliar extends Vivienda {
 		this.numAireAcond = numAireAcond;
 	} 
 
-	
+
 	@Override
 	public String toString() {
-		StringBuilder text = new StringBuilder(super.toString());
-		return "Unifamiliar [" + text + ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() +   "]";
+		
+		return "Unifamiliar [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() +   "]";
 	}
-
 
 	
 
