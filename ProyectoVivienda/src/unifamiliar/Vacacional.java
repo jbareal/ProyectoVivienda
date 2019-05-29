@@ -60,16 +60,16 @@ public class Vacacional extends Unifamiliar implements Informacion{
 		this.tipoEPO = tipoEPO;
 	}
 
-	@Override
 	public TpEPO getEpoca() {
-		return tipoEPO;
+		// TODO Auto-generated method stub
+		return tipoEPO ;
 	}
 
-	@Override
+	
 	public void setEpoca(TpEPO tipoEPO) {
-		this.tipoEPO= tipoEPO;
-		
+	  this.tipoEPO = tipoEPO;
 	}
+
 
 
 	@Override
@@ -80,17 +80,8 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	}
 
 	
-	public TpEPO getEpoca() {
-		// TODO Auto-generated method stub
-		return tipoEPO ;
-	}
-
-	
-	public void setEpoca(TpEPO tipoEPO) {
-	  this.tipoEPO = tipoEPO;
-		
-	}
-
-
-	
 }
+
+
+	
+
