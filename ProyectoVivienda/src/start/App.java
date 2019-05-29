@@ -12,7 +12,8 @@ public class App {
 			mostrarMenu();
 			opcion = Teclado.pideDatoEntero("5. Opción Salir:");
 			ejecutarOpcion(opcion);
-		} while (opcion != 0);
+		} while (opcion != 5);
+		System.out.println("Ha salido del programa");
 	}
 
 	private static void ejecutarOpcion(int opcion) {

@@ -23,7 +23,8 @@ public class OpcionesMenu {
 	public static void listarVivienda() {
 		
 		
-		System.out.println("Has escogido listar vivienda");
+		System.out.println("Has escogido listar el contenido de vivienda");
 		}
+	
 		
 }

@@ -27,16 +27,4 @@ public class Teclado {
 		return Integer.parseInt(respuesta);
 	}
 
-	public static Double pideDatoDecimal(String pregunta) {
-		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
-		String respuesta ="";
-		System.out.print(pregunta);
-		try {
-			respuesta = teclado.readLine();
-		}catch (IOException e) {
-		}
-		 
-		return Double.parseDouble(respuesta);
-	}
-
 }
