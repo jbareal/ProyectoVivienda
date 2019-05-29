@@ -56,7 +56,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	public String toString() {
 		
 		return "Vacacional [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() +   ", DiasOcupado =" +getDiasOcupado()+ ", DistanciaPlaya()=" + getDistanciaPlaya()+"]";
-				
+		
 	}
 
 	@Override

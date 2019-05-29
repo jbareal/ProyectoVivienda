@@ -53,6 +53,4 @@ public class Pension extends Hospedaje implements Informacion {
 	
 	
 	
-	
-	
 }
