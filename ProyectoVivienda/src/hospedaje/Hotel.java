@@ -1,8 +1,9 @@
 package hospedaje;
 
+import interfaces.Informacion;
 import tipos.TpPAGO;
 
-public class Hotel extends Hospedaje {
+public class Hotel extends Hospedaje implements Informacion {
 	
 	private Integer numHabitaciones;
 	private Integer numComedores;

@@ -1,6 +1,7 @@
 package unifamiliar;
 
 
+import interfaces.Informacion;
 import unifamiliar.Unifamiliar;
 
 /**
@@ -8,7 +9,7 @@ import unifamiliar.Unifamiliar;
  *
  */
 
-public class Vacacional extends Unifamiliar {
+public class Vacacional extends Unifamiliar implements Informacion {
     
 	private Integer diasOcupado; 
 	private Integer distanciaPlaya;
