@@ -59,16 +59,17 @@ public class Vacacional extends Unifamiliar implements Informacion{
 		
 	}
 
-	@Override
-	public TpEPO getEpoca() {
+	public TpEPO getTipoEPO() {
 		return tipoEPO;
 	}
 
-	@Override
-	public void setEpoca(TpEPO tipoEPO) {
+	public void setTipoEPO(TpEPO tipoEPO) {
 		this.tipoEPO = tipoEPO;
-		
 	}
+
+
+		
+	
 
 
 	
