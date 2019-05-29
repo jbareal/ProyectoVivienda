@@ -9,6 +9,7 @@ public class Hotel extends Hospedaje implements Informacion{
 	private Integer numHabitaciones;
 	private Integer numComedores;
 	private TpEPO tipoEPO; 
+	private TpPAGO tipoPAGO; 
 
 	public Hotel() {
 	}
@@ -38,18 +39,37 @@ public class Hotel extends Hospedaje implements Informacion{
 	@Override
 	public Integer getPrecioMedio() {
 		return numHabitaciones+numComedores;
+	
 	}
 
+	public TpEPO getTipoEPO() {
+		return tipoEPO;
+	}
+
+	public void setTipoEPO(TpEPO tipoEPO) {
+		this.tipoEPO = tipoEPO;
+	}
+
+
+	public TpPAGO getTipoPAGO() {
+		return tipoPAGO;
+	}
+
+	public void setTipoPAGO(TpPAGO tipoPAGO) {
+		this.tipoPAGO = tipoPAGO;
+	}
+	
+	
 	@Override
 	public String toString() {
-		return "Hotel [numHabitaciones=" + numHabitaciones + ", numComedores=" + numComedores
-				+ ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()=" + getNumComedores()
-				+ ", getPrecioMedio()=" + getPrecioMedio() + "]";
+		return "Hotel [numHabitaciones=" + numHabitaciones + ", numComedores=" + numComedores + ", tipoEPO=" + tipoEPO
+				+ ", tipoPAGO=" + tipoPAGO + ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()="
+				+ getNumComedores() + ", getPrecioMedio()=" + getPrecioMedio() + ", getTipoEPO()=" + getTipoEPO()
+				+ ", getTipoPAGO()=" + getTipoPAGO() + ", getEpoca()=" + getEpoca() + "]";
 	}
 
 	@Override
 	public TpEPO getEpoca() {
-		// TODO Auto-generated method stub
 		return tipoEPO;
 	}
 
