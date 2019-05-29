@@ -27,6 +27,8 @@ public class Particular extends Unifamiliar {
 		 */
 		public Particular(String numCatastro, Integer superficie, Integer numAireAcond, Integer numBaños, TpCAS tipoCasa) {
 			super(numCatastro, superficie, numAireAcond);
+			setNumBaños(numBaños);
+			setTipoCasa(tipoCasa);
 			
 		}
 
@@ -48,9 +50,10 @@ public class Particular extends Unifamiliar {
 
 		@Override
 		public String toString() {
-			StringBuilder text = new StringBuilder(super.toString());
-			return " Particular [" + text +" , +Particular [getNumBaños()=" + getNumBaños() + ", getTipoCasa()=" + getTipoCasa() + "]";
+			
+			return "Unifamiliar [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() + 
+					
+			 ",  numBaños=" + getNumBaños()+ ", tipoCasa=" + getTipoCasa() + "]";
 		}
-
 	
 }
