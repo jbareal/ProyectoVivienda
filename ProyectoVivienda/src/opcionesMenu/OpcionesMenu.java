@@ -3,6 +3,7 @@ package opcionesMenu;
 import hospedaje.Hotel;
 import hospedaje.Pension;
 import tipos.TpPAGO;
+import unifamiliar.Vacacional;
 import utilidades.Teclado;
 import vivienda.Vivienda;
 
@@ -28,9 +29,12 @@ public class OpcionesMenu {
 		case 2:
 			aniadirPension();
 			break;
-		/*
-		 * case 2: xxxxx; break; case 3: fgsg; break; case 4: bvdffxv; break;
-		 */
+		case 3:
+			aniadirVacacional();
+			break;
+		case 4:
+			aniadirParticular();
+			break;
 		}
 
 	}
@@ -54,6 +58,36 @@ public class OpcionesMenu {
 		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 		
 		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion));
+
+	}
+	
+	public static void aniadirVacacional() {
+
+		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
+		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
+		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
+		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
+		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+				
+		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
+
+	}
+	
+	public static void aniadirParticular() {
+
+		/* SEGUIR CAMBIANDO COSAS.
+		 * String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
+		 *
+		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
+		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
+		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
+		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+		
+		String numCatastro, Integer superficie, Integer numAireAcond, Integer numBaños, TpCAS tipoCasa
+		
+		*/
+		
+		// controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
 
 	}
 
