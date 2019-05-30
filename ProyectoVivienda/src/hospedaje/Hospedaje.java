@@ -4,7 +4,7 @@ import tipos.TpPAGO;
 import vivienda.Vivienda;
 
 public abstract class Hospedaje extends Vivienda {
-	
+
 	private TpPAGO TipoPAGO;
 
 	public Hospedaje() {
@@ -22,15 +22,12 @@ public abstract class Hospedaje extends Vivienda {
 	public void setTipoPAGO(TpPAGO tipoPAGO) {
 		this.TipoPAGO = tipoPAGO;
 	}
+
 	public abstract Integer getPrecioMedio();
 
 	@Override
 	public String toString() {
-		return "Hospedaje [ getTipoPAGO()=" + getTipoPAGO() + ", getPrecioMedio()="
-				+ getPrecioMedio() + "]";
+		return "Hospedaje [ getTipoPAGO()=" + getTipoPAGO() + ", getPrecioMedio()=" + getPrecioMedio() + "]";
 	}
-	
-	
+
 }
-
-

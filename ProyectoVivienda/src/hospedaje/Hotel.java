@@ -4,21 +4,20 @@ import interfaces.Informacion;
 import tipos.TpEPO;
 import tipos.TpPAGO;
 
-public class Hotel extends Hospedaje implements Informacion{
-	
+public class Hotel extends Hospedaje implements Informacion {
+
 	private Integer numHabitaciones;
 	private Integer numComedores;
-	private TpEPO tipoEPO; 
-	private TpPAGO tipoPAGO; 
+	private TpEPO tipoEPO;
 
 	public Hotel() {
 	}
 
-	public Hotel(String numCatastro,TpPAGO tipoPAGO, Integer numHabitaciones, Integer numComedores) {
-		super(numCatastro,tipoPAGO);
+	public Hotel(String numCatastro, TpPAGO tipoPAGO, Integer numHabitaciones, Integer numComedores) {
+		super(numCatastro, tipoPAGO);
 		this.numHabitaciones = numHabitaciones;
 		this.numComedores = numComedores;
-		}
+	}
 
 	public Integer getNumHabitaciones() {
 		return numHabitaciones;
@@ -38,8 +37,8 @@ public class Hotel extends Hospedaje implements Informacion{
 
 	@Override
 	public Integer getPrecioMedio() {
-		return numHabitaciones+numComedores;
-	
+		return numHabitaciones + numComedores;
+
 	}
 
 	public TpEPO getTipoEPO() {
@@ -50,20 +49,10 @@ public class Hotel extends Hospedaje implements Informacion{
 		this.tipoEPO = tipoEPO;
 	}
 
-
-	public TpPAGO getTipoPAGO() {
-		return tipoPAGO;
-	}
-
-	public void setTipoPAGO(TpPAGO tipoPAGO) {
-		this.tipoPAGO = tipoPAGO;
-	}
-	
-	
 	@Override
 	public String toString() {
 		return "Hotel [numHabitaciones=" + numHabitaciones + ", numComedores=" + numComedores + ", tipoEPO=" + tipoEPO
-				+ ", tipoPAGO=" + tipoPAGO + ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()="
+				+ ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()="
 				+ getNumComedores() + ", getPrecioMedio()=" + getPrecioMedio() + ", getTipoEPO()=" + getTipoEPO()
 				+ ", getTipoPAGO()=" + getTipoPAGO() + ", getEpoca()=" + getEpoca() + "]";
 	}
@@ -75,7 +64,7 @@ public class Hotel extends Hospedaje implements Informacion{
 
 	@Override
 	public void setEpoca(TpEPO tipoEPO) {
-		this.tipoEPO =tipoEPO;
-		
+		this.tipoEPO = tipoEPO;
+
 	}
 }
