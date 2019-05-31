@@ -12,6 +12,10 @@ public class Teclado {
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 		String respuesta = "";
 		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		}catch (IOException e) {
+		}
 		return respuesta;
 	}
 	
