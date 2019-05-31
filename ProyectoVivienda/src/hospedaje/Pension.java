@@ -37,7 +37,7 @@ public class Pension extends Hospedaje implements Informacion {
 
 	@Override
 	public Integer getPrecioMedio() {
-		return (paxPorHabitacion * 3) / 2;
+		return (paxPorHabitacion * 3) + 2;
 	}
 
 	@Override
