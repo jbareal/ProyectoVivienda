@@ -2,7 +2,9 @@ package opcionesMenu;
 
 import hospedaje.Hotel;
 import hospedaje.Pension;
+import tipos.TpCAS;
 import tipos.TpPAGO;
+import unifamiliar.Particular;
 import unifamiliar.Vacacional;
 import utilidades.Teclado;
 import vivienda.Vivienda;
@@ -73,23 +75,20 @@ public class OpcionesMenu {
 
 	}
 	
-	public static void aniadirParticular() {
 
-		/* SEGUIR CAMBIANDO COSAS.
-		 * String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
-		 *
-		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
-		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
-		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
-		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
-		
-		String numCatastro, Integer superficie, Integer numAireAcond, Integer numBaños, TpCAS tipoCasa
-		
-		*/
-		
-		// controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
 
-	}
+public static void aniadirParticular() {
+
+	
+	String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");		
+	Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
+	Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
+	Integer numBaños = Teclado.pideDatoEntero("Introduzca : ");
+	TpCAS tipoCasa = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
+	
+	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCasa));
+
+}
 
 	public static void modificarVivienda() {
 

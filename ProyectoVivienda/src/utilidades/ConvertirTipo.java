@@ -1,5 +1,6 @@
 package utilidades;
 
+import tipos.TpCAS;
 import tipos.TpPAGO;
 
 public class ConvertirTipo {
@@ -26,4 +27,18 @@ public class ConvertirTipo {
 		return ret;
 	}
 	
+	public static TpCAS toTpCAS(String str) {
+		TpCAS ret = null;
+		switch(str.toUpperCase()) {
+		case "ADOSADO" : ret = TpCAS.ADOSADO; break;
+		case "PAREADO" : ret = TpCAS.PAREADO; break;
+		case "PISO"    : ret = TpCAS.PISO; break;
+		
+		}
+		return ret;
+	
 }
+	
+}	
+	
+	
