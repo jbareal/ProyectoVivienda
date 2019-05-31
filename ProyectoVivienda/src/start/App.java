@@ -11,10 +11,19 @@ public class App {
 
 		do {
 			mostrarMenu();
+			try {
 			opcion = Teclado.pideDatoEntero("5. Opción Salir:");
+			}
+			catch (Exception e) {
+		}
+			if(opcion <1 || opcion >5) {
+				System.out.println("Debe escoger un número del 1 al 5.");
+			}else {
 			ejecutarOpcion(opcion);
+			}
 		} while (opcion != 5);
 		System.out.println("Has salido del programa");
+		
 	}
 
 	private static void ejecutarOpcion(int opcion) {
