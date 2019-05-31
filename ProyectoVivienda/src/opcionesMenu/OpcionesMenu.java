@@ -76,6 +76,7 @@ public class OpcionesMenu {
 	
 	public static void aniadirVacacional() {
 
+		
 		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
 		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
 		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");

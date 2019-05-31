@@ -1,9 +1,9 @@
 package hospedaje;
 
 import interfaces.Informacion;
-import opcionesMenu.OpcionesMenu;
 import tipos.TpEPO;
 import tipos.TpPAGO;
+
 
 public class Pension extends Hospedaje implements Informacion {
 
