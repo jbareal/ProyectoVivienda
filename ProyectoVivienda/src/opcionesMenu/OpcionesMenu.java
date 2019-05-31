@@ -23,7 +23,18 @@ public class OpcionesMenu {
 		System.out.println("4. Particular.");
 
 		Integer opcion = 0;
-
+		
+		try {
+		opcion = Teclado.pideDatoEntero("Opción escogida: ");
+		}
+		catch(Exception e) {
+		}
+		if(opcion <1 || opcion >4) {
+			System.out.println("Debe escoger un número del 1 al 4.");
+		}else {
+		
+}
+	
 		switch (opcion) {
 		case 1:
 			aniadirHotel();
