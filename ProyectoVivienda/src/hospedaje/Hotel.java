@@ -57,9 +57,11 @@ public class Hotel extends Hospedaje implements Informacion {
 				+ ", getTipoPAGO()=" + getTipoPAGO() + ", getEpoca()=" + getEpoca() + "]";
 	}
 
+
 	@Override
 	public TpEPO getEpoca() {
-		return tipoEPO;
+		
+		return tipoEPO;    
 	}
 
 	@Override
