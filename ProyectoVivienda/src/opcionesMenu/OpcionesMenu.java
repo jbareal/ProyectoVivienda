@@ -1,5 +1,6 @@
 package opcionesMenu;
 
+import controlador.GestionLista;
 import hospedaje.Hotel;
 import hospedaje.Pension;
 import tipos.TpCAS;
@@ -71,7 +72,8 @@ public class OpcionesMenu {
 		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 		
 		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion));
-
+		listadoVivienda();
+		
 	}
 	
 	public static void aniadirVacacional() {
@@ -84,6 +86,7 @@ public class OpcionesMenu {
 		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 				
 		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
+		
 
 	}
 	
@@ -99,12 +102,16 @@ public static void aniadirParticular() {
 	TpCAS tipoCasa = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
 	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCasa));
-
+	System.out.println(GestionLista.getLista());
 }
 
 	public static void modificarVivienda() {
+		System.out.println("Has escogido modificar vivienda \n");
+		listadoVivienda();
+		
+		
 
-		System.out.println("Has escogido modificar vivienda");
+		
 	}
 
 	public static void borrarVivienda() {
@@ -123,20 +130,32 @@ public static void aniadirParticular() {
 
 	public static void listadoVivienda() {
 
-		controlador.GestionLista.anadir(new Hotel("22", TpPAGO.TARJETA, 10, 2));
-		controlador.GestionLista.anadir(new Hotel("23", TpPAGO.PAYPAL, 20, 2));
+		
+		
 
 		int cont = 0;
 		for (Vivienda v : controlador.GestionLista.getLista()) {
 			if (v instanceof Hotel) {
 				Hotel h = (Hotel) v;
 				System.out.println((++cont) + " Hotel con nº Catastro: " + h.getNumCatastro() + "," + "con pago: "
-						+ h.getTipoPAGO() + " y nº habitaciones: " + h.getNumHabitaciones()
-						+ ", nº de comedores:" + h.getNumComedores());
+						+ h.getTipoPAGO() + ", nº habitaciones: " + h.getNumHabitaciones()
+						+ "y nº de comedores:" + h.getNumComedores());
 			}
+			
+			if (v instanceof Pension) {
+				Pension p = (Pension) v;
+				System.out.println((++cont) + " Pensión con nº Catastro: " + p.getNumCatastro() + "," + "con pago: "
+							+ p.getTipoPAGO() + ", opinión de Viajeros=" + p.getOpinionViajeros()
+							+ "y con nº de Personas por Habitación=" + p.getPaxPorHabitacion());
+				}
+			
+			
+					
+		}
+				
 			// faltan otras clases y mil cosas mas
 		}
 
-	}
-
 }
+
+
