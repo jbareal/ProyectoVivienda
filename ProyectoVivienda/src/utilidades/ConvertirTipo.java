@@ -1,6 +1,7 @@
 package utilidades;
 
 import tipos.TpCAS;
+import tipos.TpEPO;
 import tipos.TpPAGO;
 
 public class ConvertirTipo {
@@ -36,9 +37,31 @@ public class ConvertirTipo {
 		
 		}
 		return ret;
+	}
+	
+	public static TpEPO toTpEPO(Integer num) {
+		TpEPO ret = null;
+		switch(num) {
+		case 1: ret = TpEPO.VERANO; break;
+		case 2: ret = TpEPO.INVIERNO; break;
+		case 3: ret = TpEPO.ANUAL; break;
+		}
+		return ret;
+	}
+	
+	public static TpEPO toTpEPO(String str) {
+		TpEPO ret = null;
+		switch(str.toUpperCase()) {
+		case "VERANO" : ret = TpEPO.VERANO; break;
+		case "INVIERNO" : ret = TpEPO.INVIERNO; break;
+		case "ANUAL"    : ret = TpEPO.ANUAL; break;
+		
+		}
+		return ret;
 	
 }
-	
+
+
 }	
 	
 	
