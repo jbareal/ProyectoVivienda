@@ -8,8 +8,6 @@ public class Teclado {
 
 	public static String pideDatoCadena(String pregunta) {
 		
-		
-		@SuppressWarnings("unused")
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 		String respuesta = "";
 		System.out.print(pregunta);
