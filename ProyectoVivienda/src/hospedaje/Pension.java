@@ -14,10 +14,11 @@ public class Pension extends Hospedaje implements Informacion {
 	public Pension() {
 	}
 
-	public Pension(String numCatastro, TpPAGO tipoPAGO, String opinionViajeros, Integer paxPorHabitacion) {
+	public Pension(String numCatastro, TpPAGO tipoPAGO, String opinionViajeros, Integer paxPorHabitacion, TpEPO tipoEPO) {
 		super(numCatastro, tipoPAGO);
 		this.opinionViajeros = opinionViajeros;
 		this.paxPorHabitacion = paxPorHabitacion;
+		this.tipoEPO = tipoEPO;
 	}
 
 	public String getOpinionViajeros() {

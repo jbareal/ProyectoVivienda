@@ -8,6 +8,7 @@ import controlador.GestionLista;
 import hospedaje.Hotel;
 import hospedaje.Pension;
 import tipos.TpCAS;
+import tipos.TpEPO;
 import tipos.TpPAGO;
 import unifamiliar.Particular;
 import unifamiliar.Vacacional;
@@ -60,11 +61,12 @@ public class OpcionesMenu {
 	public static void aniadirHotel() {
 
 		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
-		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago: TARJETA, PAYPAL, EFECTIVO, TODO: "));
+		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: "));
 		Integer numHabitaciones = Teclado.pideDatoEntero("Introduzca el nº de habitaciones: ");
 		Integer numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 
-		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores));
+		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores, tipoEPO));
 		listadoVivienda();
 
 	}
@@ -72,11 +74,12 @@ public class OpcionesMenu {
 	public static void aniadirPension() {
 
 		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
-		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago: TARJETA, PAYPAL, EFECTIVO, TODO: "));
+		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: "));
 		String opinionViajeros = Teclado.pideDatoCadena("Introduzca su opinión: ");
 		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 		
-		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion));
+		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion, tipoEPO));
 		listadoVivienda();
 		
 	}
@@ -89,8 +92,9 @@ public class OpcionesMenu {
 		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
 		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
 		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 				
-		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
+		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya, tipoEPO ));
 		listadoVivienda();
 		
 
@@ -114,9 +118,7 @@ public static void aniadirParticular() {
 	public static void modificarVivienda() {
 		System.out.println("Has escogido modificar vivienda \n");
 		listadoVivienda();
-		
-		
-
+	
 		
 	}
 

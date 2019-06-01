@@ -30,10 +30,11 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	 * @param distanciaPlaya
 	 */
 	
-	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanaciaPlaya) {
+	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanciaPlaya, TpEPO tipoEPO) {
 		super(numCatastro, superficie, numAireAcond);
 		setDiasOcupado(diasOcupado);
 		setDistanciaPlaya(distanciaPlaya);
+		this.tipoEPO = tipoEPO;
 	}
 
 	public Integer getDiasOcupado() {
