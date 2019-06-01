@@ -65,17 +65,40 @@ public class OpcionesMenu {
 	}
 
 	public static void aniadirHotel() {
+		
+		
+		String numCatastro = Teclado.pideDatoCadena("Introduzca un nº de catastro: ");
+		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago: Tarjeta, Paypal, Efectivo, Todo: "));
+		Integer numHabitaciones = 0;
+		
+		do {
+		try {
+		numHabitaciones = Teclado.pideDatoEntero("Introduzca el nº de habitaciones: ");
+		
+		}catch (Exception e) {
+			System.out.println("Debe escribir un número. ");		
+		}
+		}while (numHabitaciones ==0);
+		
+		
+		Integer numComedores = 0;
+		do {
+			try {
+				numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
+			}catch (Exception e) {
+				System.out.println("Debe escribir un número. ");		
+			}
+			}while (numHabitaciones ==0);
+		
+		
 
-		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
-		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: "));
-		Integer numHabitaciones = Teclado.pideDatoEntero("Introduzca el nº de habitaciones: ");
-		Integer numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 
 		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores, tipoEPO));
 		listadoVivienda();
 
 	}
+	
 
 	public static void aniadirPension() {
 
