@@ -1,6 +1,7 @@
 package controlador;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import vivienda.Vivienda;
@@ -8,7 +9,7 @@ import vivienda.Vivienda;
 public class GestionLista {
 
 	private static List<Vivienda> lstViviendas = new ArrayList<>();
-
+	
 	public static void anadir(Vivienda v) {
 		lstViviendas.add(v);
 	}

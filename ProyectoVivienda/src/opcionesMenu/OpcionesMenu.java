@@ -1,5 +1,9 @@
 package opcionesMenu;
 
+import java.util.Collections;
+import java.util.Comparator;
+
+import controlador.Comparador;
 import controlador.GestionLista;
 import hospedaje.Hotel;
 import hospedaje.Pension;
@@ -61,6 +65,7 @@ public class OpcionesMenu {
 		Integer numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
 
 		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores));
+		listadoVivienda();
 
 	}
 
@@ -86,6 +91,7 @@ public class OpcionesMenu {
 		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 				
 		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
+		listadoVivienda();
 		
 
 	}
@@ -129,9 +135,11 @@ public static void aniadirParticular() {
 	}
 
 	public static void listadoVivienda() {
+		
 
-		
-		
+		Comparator <Vivienda> comparador = new Comparador();
+		Collections.sort(controlador.GestionLista.getLista(), comparador);
+
 
 		int cont = 0;
 		for (Vivienda v : controlador.GestionLista.getLista()) {
@@ -153,7 +161,7 @@ public static void aniadirParticular() {
 					
 		}
 				
-			// faltan otras clases y mil cosas mas
+		
 		}
 
 }

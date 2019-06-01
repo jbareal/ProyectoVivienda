@@ -1,12 +1,14 @@
 package controlador;
 
+import java.util.Comparator;
+
 import hospedaje.Hotel;
 import hospedaje.Pension;
 import unifamiliar.Particular;
 import unifamiliar.Vacacional;
 import vivienda.Vivienda;
 
-public class Comparador {
+public class Comparador implements Comparator <Vivienda> {
 	
 	public int compare(Vivienda v1, Vivienda v2) {
 		int res = 0;
