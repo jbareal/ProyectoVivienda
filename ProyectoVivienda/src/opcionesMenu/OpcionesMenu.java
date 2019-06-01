@@ -121,15 +121,17 @@ public static void aniadirParticular() {
 }
 
 	public static void modificarVivienda() {
-		System.out.println("Has escogido modificar vivienda \n");
+		
+		System.out.println("Has escogido modificar vivienda");
+		System.out.println("*************************");
 		listadoVivienda();
-	
 		
 	}
 
 	public static void borrarVivienda() {
 
 		System.out.println("Has escogido borrar vivienda");
+		System.out.println("*************************");
 		
 		listadoVivienda();
 		int num = Teclado.pideDatoEntero("Introduzca num de la vivienda a borrar: ");
@@ -139,6 +141,7 @@ public static void aniadirParticular() {
 	public static void listarVivienda() {
 
 		System.out.println("Has escogido listar el contenido de vivienda");
+		System.out.println("*************************");
 	}
 
 	public static void listadoVivienda() {
