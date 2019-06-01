@@ -70,4 +70,5 @@ public class Hotel extends Hospedaje implements Informacion {
 		this.tipoEPO = tipoEPO;
 
 	}
+	
 }

@@ -97,7 +97,6 @@ public class OpcionesMenu {
 		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya, tipoEPO ));
 		listadoVivienda();
 		
-
 	}
 	
 

@@ -72,7 +72,6 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	}
 
 
-
 	@Override
 	public String toString() {
 		
