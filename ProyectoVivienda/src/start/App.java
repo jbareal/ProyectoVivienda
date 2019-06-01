@@ -45,7 +45,6 @@ public class App {
 
 	private static void mostrarMenu() {
 		
-		
 		System.out.println("\n           Menu principal");
 		System.out.println("************************************");
 		System.out.println("1. Añadir nueva vivienda.");
