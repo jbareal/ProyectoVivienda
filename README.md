@@ -114,7 +114,8 @@ public static void modificarVivienda() {
 		
 	System.out.println("Has escogido modificar vivienda \n");
 	
-	System.out.println(GestionLista.getLista());		
+		
+	listadoVivienda();
 	
 	for(Vivienda v : controlador.GestionLista.getLista()) {
 			
