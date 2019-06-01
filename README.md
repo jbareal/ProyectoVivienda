@@ -139,7 +139,7 @@ public static void modificarVivienda() {
 					System.out.println("Debe escoger un número del 1 al 4.");
 				}else {
 				
-				}    
+				   
 			
 				switch (opcion) {
 				case 1:
@@ -156,7 +156,7 @@ public static void modificarVivienda() {
 					break;
 				}					
 			     
-			  
+			  }
 		
 			}
 			
@@ -181,7 +181,7 @@ public static void modificarVivienda() {
 				System.out.println("Debe escoger un número del 1 al 4.");
 				}else {
 					
-				}    
+				    
 				
 				switch (opcion) {
 				case 1:
@@ -196,8 +196,9 @@ public static void modificarVivienda() {
 				case 4:
 				//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitación"));	
 					break;
-					}			
+				}
 			}
+		}
 				
 			if (v instanceof Particular) {
 					
@@ -221,7 +222,7 @@ public static void modificarVivienda() {
 				System.out.println("Debe escoger un número del 1 al 5.");
 				}else {
 					
-				}    
+				   
 				
 				switch (opcion) {
 				case 1:
@@ -240,7 +241,8 @@ public static void modificarVivienda() {
 				//  v.setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
 				  break;
 				}		
-			}	
+			}
+		}	
 		    	if (v instanceof Vacacional) {
 		    		
 		    	
@@ -262,7 +264,7 @@ public static void modificarVivienda() {
 				System.out.println("Debe escoger un número del 1 al 5.");
 				}else {
 				
-				}    
+				    
 						
 				switch (opcion) {
 				case 1:
@@ -282,11 +284,10 @@ public static void modificarVivienda() {
 				break;
 			}
 		}
+	}		
 			
-			else {
-				//lo que se quiera que haga después
-		}			
-	}
+					
+     }
 }
 	
 
