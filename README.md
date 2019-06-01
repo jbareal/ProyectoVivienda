@@ -74,7 +74,7 @@ public class OpcionesMenu {
 		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
 		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago: TARJETA, PAYPAL, EFECTIVO, TODO: "));
 		String opinionViajeros = Teclado.pideDatoCadena("Introduzca su opinión: ");
-		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de paxPorHabitación: ");
 		
 		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion));
 		
