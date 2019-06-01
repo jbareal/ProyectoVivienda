@@ -155,24 +155,38 @@ public static void aniadirParticular() {
 		for (Vivienda v : controlador.GestionLista.getLista()) {
 			if (v instanceof Hotel) {
 				Hotel h = (Hotel) v;
-				System.out.println((++cont) + " Hotel con nº Catastro: " + h.getNumCatastro() + "," + "con pago: "
+				System.out.println((++cont) + " Hotel con nº Catastro: " + h.getNumCatastro() + "," + ", pago con: "
 						+ h.getTipoPAGO() + ", nº habitaciones: " + h.getNumHabitaciones()
-						+ "y nº de comedores:" + h.getNumComedores());
+						+ ", nº de comedores:" + h.getNumComedores()+ ", para la época"+ h.getEpoca());
 			}
 			
 			if (v instanceof Pension) {
 				Pension p = (Pension) v;
-				System.out.println((++cont) + " Pensión con nº Catastro: " + p.getNumCatastro() + "," + "con pago: "
-							+ p.getTipoPAGO() + ", opinión de Viajeros=" + p.getOpinionViajeros()
-							+ "y con nº de Personas por Habitación=" + p.getPaxPorHabitacion());
+				System.out.println((++cont) + " Pensión con nº Catastro: " + p.getNumCatastro() + "," + ", pago con: "
+							+ p.getTipoPAGO() + ", opinión de Viajeros: " + p.getOpinionViajeros()
+							+ ", nº de Personas por Habitación:  " + p.getPaxPorHabitacion()+ ", para la época: "+ p.getEpoca()) ;
 				}
 			
 			
 					
-		}
-				
+		if (v instanceof Vacacional) {
+			Vacacional c = (Vacacional) v;
+			System.out.println((++cont) + " Vacacional con nº Catastro: " + c.getNumCatastro() + "," + ", superficie:  "
+						+ c.getSuperficie() + ", nº aire acondicionado: " + c.getNumAireAcond()
+						+ ", días ocupados:  " + c.getDiasOcupado()+ ", distancia a la playa: "+ c.getDistanciaPlaya() + ", para la época: " + c.getEpoca()) ;
+			}
+		
+		if (v instanceof Particular) {
+			Particular t = (Particular) v;
+			System.out.println((++cont) + " Particular con nº Catastro: " + t.getNumCatastro() + "," + ", superficie:  "
+						+ t.getSuperficie() + ", nº aire acondicionado: " + t.getNumAireAcond()
+						+ ", nº baños:  " + t.getNumBaños()+ ", tipo de casa: "+ t.getTipoCasa()) ;
+			}
+		
+		
 		
 		}
+	}
 
 }
 
