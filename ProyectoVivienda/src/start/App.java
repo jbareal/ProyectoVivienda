@@ -44,13 +44,14 @@ public class App {
 	}
 
 	private static void mostrarMenu() {
-
-		System.out.println("\n     Menu principal");
-		System.out.println("*************************");
+		
+		System.out.println("\n           Menu principal");
+		System.out.println("************************************");
 		System.out.println("1. Añadir nueva vivienda.");
 		System.out.println("2. Modificar una vivienda.");
 		System.out.println("3. Borrar una vivienda.");
 		System.out.println("4. Listar el contenido de viviendas.");
 	}
+	
 
 }
