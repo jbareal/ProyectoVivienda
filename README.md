@@ -143,7 +143,7 @@ public static void modificarVivienda() {
 			
 				switch (opcion) {
 				case 1:
-					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+				v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
 					break;
 				case 2:
 				//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
@@ -160,132 +160,131 @@ public static void modificarVivienda() {
 		
 			}
 			
-				if (v instanceof Pension) {
+			if (v instanceof Pension) {
 					
 				
-					System.out.println("Seleccione el atributo que desee modificar: ");
-					System.out.println("****************************************");
-					System.out.println("1. NumCatastro ");
-					System.out.println("2. TipoPAGO ");
-					System.out.println("3. OpinionViajeros ");
-					System.out.println("4. PaxPorHabitación ");
+				System.out.println("Seleccione el atributo que desee modificar: ");
+				System.out.println("****************************************");
+				System.out.println("1. NumCatastro ");
+				System.out.println("2. TipoPAGO ");
+				System.out.println("3. OpinionViajeros ");
+				System.out.println("4. PaxPorHabitación ");
 					
-					Integer opcion = 0;
-					
-					try {
-					opcion = Teclado.pideDatoEntero("Opción escogida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcion <1 || opcion >4) {
-						System.out.println("Debe escoger un número del 1 al 4.");
-					}else {
-					
-					}    
+				Integer opcion = 0;
 				
-					switch (opcion) {
-					case 1:
-						v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-						break;
-					case 2:
-					//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
-						break;
-					case 3:
-					//  v.setNumHabitaciones(Teclado.pideDatoCadena("Introuzca la opinión de los viajeros"));
-						break;
-					case 4:
-					//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitación"));	
-						break;
+				try {
+				opcion = Teclado.pideDatoEntero("Opción escogida: ");
+				}
+				catch(Exception e) {
+				}
+				if(opcion <1 || opcion >4) {
+				System.out.println("Debe escoger un número del 1 al 4.");
+				}else {
+					
+				}    
+				
+				switch (opcion) {
+				case 1:
+				      v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					break;
+				case 2:
+				//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					break;
+				case 3:
+				//  v.setNumHabitaciones(Teclado.pideDatoCadena("Introuzca la opinión de los viajeros"));
+					break;
+				case 4:
+				//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitación"));	
+					break;
 					}			
 			}
 				
-				if (v instanceof Particular) {
+			if (v instanceof Particular) {
 					
 				
-					System.out.println("Seleccione el atributo que desee modificar: ");
-					System.out.println("****************************************");
-					System.out.println("1. NumCatastro ");
-					System.out.println("2. Superficie ");
-					System.out.println("3. NumeAireAcond ");
-					System.out.println("4. NumBaños ");
-					System.out.println("5. TipoCasa ");
+				System.out.println("Seleccione el atributo que desee modificar: ");
+				System.out.println("****************************************");
+				System.out.println("1. NumCatastro ");
+				System.out.println("2. Superficie ");
+				System.out.println("3. NumeAireAcond ");
+				System.out.println("4. NumBaños ");
+				System.out.println("5. TipoCasa ");
 					
-					Integer opcion = 0;
-					
-					try {
-					opcion = Teclado.pideDatoEntero("Opción escogida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcion <1 || opcion >5) {
-						System.out.println("Debe escoger un número del 1 al 5.");
-					}else {
-					
-					}    
+				Integer opcion = 0;
 				
-					switch (opcion) {
-					case 1:
-						v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-						break;
-					case 2:
-					//  v.setSuperficie(Teclado.pideDatoCadena("Introduzca la superficie: "));
-						break;
-					case 3:
-					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
-						break;
-					case 4:
-					//  v.setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
-						break;
-					case 5:
-					//  v.setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
-						break;
+				try {
+				opcion = Teclado.pideDatoEntero("Opción escogida: ");
+				}
+				catch(Exception e) {
+				}
+				if(opcion <1 || opcion >5) {
+				System.out.println("Debe escoger un número del 1 al 5.");
+				}else {
+					
+				}    
+				
+				switch (opcion) {
+				case 1:
+			   	v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+				  break;
+				case 2:
+				//  v.setSuperficie(Teclado.pideDatoCadena("Introduzca la superficie: "));
+				  break;
+				case 3:
+				//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+				  break;
+				case 4:
+				//  v.setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
+				  break;
+				case 5:
+				//  v.setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
+				  break;
 				}		
 			}	
 		    	if (v instanceof Vacacional) {
 		    		
 		    	
-				    System.out.println("****************************************");
-					System.out.println("1. NumCatastro ");
-					System.out.println("2. Superficie ");
-					System.out.println("3. NumeAireAcond ");
-					System.out.println("4. Dias Ocupado ");
-					System.out.println("5. Distancia a la playa ");
+			        System.out.println("****************************************");
+				System.out.println("1. NumCatastro ");
+				System.out.println("2. Superficie ");
+				System.out.println("3. NumeAireAcond ");
+				System.out.println("4. Dias Ocupado ");
+				System.out.println("5. Distancia a la playa ");
 							
-							Integer opcion = 0;
+				Integer opcion = 0;
 							
-							try {
-							opcion = Teclado.pideDatoEntero("Opción escogida: ");
-							}
-							catch(Exception e) {
-							}
-							if(opcion <1 || opcion >5) {
-								System.out.println("Debe escoger un número del 1 al 5.");
-							}else {
-							
-							}    
-						
-							switch (opcion) {
-							case 1:
-								v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-								break;
-							case 2:
-							//  v.setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
-								break;
-							case 3:
-							//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
-								break;
-							case 4:
-							//  v.setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
-								break;
-							case 5:
-							//  v.setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
-								break;
-			
-							}
+				try {
+				    opcion = Teclado.pideDatoEntero("Opción escogida: ");
 				}
+				catch(Exception e) {
+				}
+				if(opcion <1 || opcion >5) {
+				System.out.println("Debe escoger un número del 1 al 5.");
+				}else {
+				
+				}    
+						
+				switch (opcion) {
+				case 1:
+				v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+				break;
+				case 2:
+				//  v.setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
+				break;
+				case 3:
+				//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+				break;
+				case 4:
+				//  v.setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
+				break;
+				case 5:
+				//  v.setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
+				break;
+			}
+		}
 			
 			else {
-				//lo que se quiera, por ejemplo volver al inicio
+				//lo que se quiera que haga después
 		}			
 	}
 }
