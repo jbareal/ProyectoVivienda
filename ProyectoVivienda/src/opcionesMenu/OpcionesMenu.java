@@ -16,9 +16,9 @@ import utilidades.Teclado;
 import vivienda.Vivienda;
 
 public class OpcionesMenu {
-
-	public static void aniadirVivienda() {
-
+	
+	public static void escogerTipoVivienda() {
+		
 		System.out.println("Has escogido añadir vivienda");
 
 		System.out.println("\n Elija el tipo de vivienda en el que desee realizar la acción");
@@ -27,6 +27,12 @@ public class OpcionesMenu {
 		System.out.println("2. Pensión.");
 		System.out.println("3. Vacacional.");
 		System.out.println("4. Particular.");
+	}
+	
+
+	public static void aniadirVivienda() {
+
+		escogerTipoVivienda();
 
 		Integer opcion = 0;
 		
@@ -91,10 +97,10 @@ public class OpcionesMenu {
 		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
 		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
 		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
-		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
+		Integer distanciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 				
-		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya, tipoEPO ));
+		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanciaPlaya, tipoEPO ));
 		listadoVivienda();
 		
 	}
