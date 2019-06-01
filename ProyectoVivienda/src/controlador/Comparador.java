@@ -6,7 +6,7 @@ import unifamiliar.Particular;
 import unifamiliar.Vacacional;
 import vivienda.Vivienda;
 
-public class Comparadaor {
+public class Comparador {
 	
 	public int compare(Vivienda v1, Vivienda v2) {
 		int res = 0;
