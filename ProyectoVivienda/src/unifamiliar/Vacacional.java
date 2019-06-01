@@ -34,7 +34,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 		super(numCatastro, superficie, numAireAcond);
 		setDiasOcupado(diasOcupado);
 		setDistanciaPlaya(distanciaPlaya);
-		this.tipoEPO = tipoEPO;
+		this.tipoEPO = tipoEPO; 
 	}
 
 	public Integer getDiasOcupado() {
