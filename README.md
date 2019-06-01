@@ -87,7 +87,7 @@ public class OpcionesMenu {
 		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
 		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
 		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
-		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca : ");
+		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca días ocupado: ");
 		Integer distanaciaPlaya = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 				
 		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
