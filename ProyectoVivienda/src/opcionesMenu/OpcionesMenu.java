@@ -96,7 +96,9 @@ public class OpcionesMenu {
 
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual: "));
 
-		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores, tipoEPO));
+		//controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores, tipoEPO));
+		controlador.GestionLista.anadirHotel(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores));
+		//He modificado los metodos para añadir en GestionLista
 		listadoVivienda();
 
 	}
@@ -112,7 +114,8 @@ public class OpcionesMenu {
 		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual: "));
 		
-		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion, tipoEPO));
+		//controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion, tipoEPO));
+		controlador.GestionLista.anadirPension(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion));
 		listadoVivienda();
 		
 	}
@@ -128,7 +131,8 @@ public class OpcionesMenu {
 		Integer distanciaPlaya = Teclado.pideDatoEntero("Introduzca la distacia a la playa, en metros: ");
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 				
-		controlador.GestionLista.anadir(new Vacacional(numCatastro, superficie, numAireAcond, diasOcupado,distanciaPlaya, tipoEPO ));
+		//controlador.GestionLista.anadir(new Vacacional(numCatastro, superficie, numAireAcond, diasOcupado,distanciaPlaya, tipoEPO ));
+		controlador.GestionLista.anadirVac1(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanaciaPlaya ));
 		listadoVivienda();
 		
 	}
@@ -145,7 +149,8 @@ public static void aniadirParticular() {
 	Integer numBaños = Teclado.pideDatoEntero("Introduzca el número de baños: ");
 	TpCAS tipoCASA = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
-	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
+	//controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
+	controlador.GestionLista.anadirParticular(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCasa));
 	listadoVivienda();
 }
 
@@ -181,22 +186,22 @@ public static void aniadirParticular() {
 						System.out.println("Debe elegir un número del 1 al 4.");
 					}else {
 					
-					   
-				
 					switch (opcion) {
-					case 1:
-					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-						break;
-					case 2:
-					// v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
-						break;
-					case 3:
-					//  v.setNumHabitaciones(Teclado.pideDatoEntero("Introuzca el nuevo número de habitaciones"));
-						break;
-					case 4:
-					//  v.setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo número de habitaciones"));	
-						break;
-					}					
+				case 1:
+					((Hotel)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					break;
+				case 2:
+				    //((Hotel)v).setTipoEPO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					break;
+				case 3:
+				   ((Hotel)v).setNumHabitaciones(Teclado.pideDatoEntero("Introuzca el nuevo número de habitaciones: "));
+					break;
+				case 4:
+				  ((Hotel)v).setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo número de comedores: "));	
+					break;
+				}	   
+				
+								
 				     
 				  }
 			
@@ -223,22 +228,22 @@ public static void aniadirParticular() {
 					System.out.println("Debe elegir un número del 1 al 4.");
 					}else {
 						
-					    
-					
 					switch (opcion) {
 					case 1:
-					      v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+						((Pension)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
 						break;
 					case 2:
-					//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					  //  ((Pension)v).setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
 						break;
 					case 3:
-					//  v.setNumHabitaciones(Teclado.pideDatoCadena("Introuzca la opinión de los viajeros"));
+					    ((Pension)v).setOpinionViajeros(Teclado.pideDatoCadena("Introuzca la opinión de los viajeros: "));
 						break;
 					case 4:
-					//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitación"));	
+						((Pension)v).setPaxPorHabitacion(Teclado.pideDatoEntero("Introduzca el nuevo tipo de PaxPorHabitación: "));	
 						break;
-					}
+					}    
+					
+					
 				}
 			}
 					
@@ -264,26 +269,26 @@ public static void aniadirParticular() {
 					System.out.println("Debe elagir un número del 1 al 5.");
 					}else {
 						
-					   
-					
 					switch (opcion) {
 					case 1:
-				   	v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-					  break;
+						((Particular)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+						break;
 					case 2:
-					// v.setSuperficie(Teclado.pideDatoCadena("Introduzca la superficie: "));
-					  break;
+					  ((Particular)v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
+						break;
 					case 3:
-					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
-					  break;
+					  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+						break;
 					case 4:
-					//  v.setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
-					  break;
+						 ((Particular)v).setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
+						break;
 					case 5:
-					//  v.setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
-					  break;
-					}		
-				}
+						//((Particular)v).setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
+						break;
+				}	   
+					
+							
+			    }
 			}	
 			    	if (v instanceof Vacacional) {
 			    		
@@ -306,25 +311,25 @@ public static void aniadirParticular() {
 					System.out.println("Debe elegir un número del 1 al 5.");
 					}else {
 					
-					    
-							
 					switch (opcion) {
 					case 1:
-					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-					break;
+					((Vacacional)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					     break;
 					case 2:
-					//  v.setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
-					break;
+				        ((Vacacional) v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
+					     break;
 					case 3:
-					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
-					break;
+					((Vacacional) v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+					      break;
 					case 4:
-					//  v.setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
+					 ((Vacacional)v).setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
 					break;
 					case 5:
-					//  v.setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
+					 ((Vacacional)v).setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
 					break;
-				}
+			       }    
+							
+					
 			}
 		}		
 		else{
