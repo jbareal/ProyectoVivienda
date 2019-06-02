@@ -78,7 +78,7 @@ public class OpcionesMenu {
 		numHabitaciones = Teclado.pideDatoEntero("Introduzca el nº de habitaciones: ");
 		
 		}catch (Exception e) {
-			System.out.println("Debe escribir un número. ");		
+			System.out.println("Debe escribir un número");		
 		}
 		}while (numHabitaciones ==0);
 		
@@ -88,7 +88,7 @@ public class OpcionesMenu {
 			try {
 				numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
 			}catch (Exception e) {
-				System.out.println("Debe escribir un número. ");		
+				System.out.println("Debe escribir un número");		
 			}
 			}while (numComedores ==0);
 		
@@ -277,13 +277,13 @@ public static void aniadirParticular() {
 					  ((Particular)v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
 						break;
 					case 3:
-					  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+					  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados: "));
 						break;
 					case 4:
-						 ((Particular)v).setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
+						 ((Particular)v).setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños: "));	
 						break;
 					case 5:
-						//((Particular)v).setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
+						//((Particular)v).setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa: "));
 						break;
 				}	   
 					
@@ -319,13 +319,13 @@ public static void aniadirParticular() {
 				        ((Vacacional) v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
 					     break;
 					case 3:
-					((Vacacional) v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+					((Vacacional) v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados: "));
 					      break;
 					case 4:
-					 ((Vacacional)v).setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
+					 ((Vacacional)v).setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado: "));	
 					break;
 					case 5:
-					 ((Vacacional)v).setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
+					 ((Vacacional)v).setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa: "));
 					break;
 			       }    
 							
