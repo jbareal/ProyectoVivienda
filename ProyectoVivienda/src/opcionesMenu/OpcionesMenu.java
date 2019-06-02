@@ -399,6 +399,13 @@ public static void aniadirParticular() {
 		
 		}
 	}
+	
+	
+/*
+Mirad el siguiente método por si pudiese servir para algo
+*/
+	
+
 public static List<Vivienda>getViviendasPorTipo(String tipo){
 	Stream<Vivienda> s = null;
 	List<Vivienda> list = GestionLista.getLista();
@@ -413,11 +420,11 @@ public static List<Vivienda>getViviendasPorTipo(String tipo){
 	             s = list.stream().filter(p-> p instanceof Pension);
 		break;
 					
-		case "PARTICULAR":
+	   case "PARTICULAR":
 		    s = list.stream().filter(p-> p instanceof Particular);
 		break;
-		
-		case "VACACIONAL":
+	
+	   case "VACACIONAL":
 		   s = list.stream().filter(p->p instanceof Vacacional);
 		break;
 		default:
