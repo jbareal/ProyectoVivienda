@@ -407,31 +407,31 @@ Mirad el siguiente método por si pudiese servir para algo
 	
 
 public static List<Vivienda>getViviendasPorTipo(String tipo){
-	Stream<Vivienda> s = null;
+	Stream<Vivienda> v = null;
 	List<Vivienda> list = GestionLista.getLista();
 	Collections.sort(list, (i1,i2) -> i1.getNumCatastro().compareTo(i2.getNumCatastro()));		
 			
 	switch(tipo.toUpperCase()){
 	   case "HOTELES":
-		s = list.stream().filter(p-> p instanceof Hotel);
+		v = list.stream().filter(p-> p instanceof Hotel);
 		break;
 			
 	   case "PENSIONES":
-	             s = list.stream().filter(p-> p instanceof Pension);
+	         v = list.stream().filter(p-> p instanceof Pension);
 		break;
 					
 	   case "PARTICULAR":
-		    s = list.stream().filter(p-> p instanceof Particular);
+		  v = list.stream().filter(p-> p instanceof Particular);
 		break;
 	
 	   case "VACACIONAL":
-		   s = list.stream().filter(p->p instanceof Vacacional);
+		   v = list.stream().filter(p->p instanceof Vacacional);
 		break;
 		default:
-		   s = list.stream();
+		   v = list.stream();
 	}
 					
-	return	s.collect(Collectors.toList());	
+	return	v.collect(Collectors.toList());	
     }	
 	
 }
