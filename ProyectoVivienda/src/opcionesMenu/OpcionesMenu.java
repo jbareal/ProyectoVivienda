@@ -344,6 +344,7 @@ public static void aniadirParticular() {
 		
 		int num = Teclado.pideDatoEntero("\nIntroduzca el nº de la vivienda a borrar: ");
 		controlador.GestionLista.borrar(num-1);
+		listadoVivienda();
 	}
 
 	public static void listarVivienda() {
