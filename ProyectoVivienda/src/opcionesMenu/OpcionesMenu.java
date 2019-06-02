@@ -397,7 +397,7 @@ public static void aniadirParticular() {
 			Particular t = (Particular) v;
 			System.out.println((++cont) + " Vivienda particular con [nº Catastro: " + t.getNumCatastro() + "," + " Superficie:  "
 						+ t.getSuperficie() + " metros cuadrados, nº de aires acondicionados: " + t.getNumAireAcond()
-						+ ", nº de baños:  " + t.getNumBaños()+ ", Tipo de casa: "+ t.getTipoCASA()+"]") ;
+						+ ", nº de baños:  " + t.getNumBanios()+ ", Tipo de casa: "+ t.getTipoCasa()+"]") ;
 			}
 		
 		
