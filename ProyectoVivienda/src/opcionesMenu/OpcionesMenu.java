@@ -345,7 +345,7 @@ public static void aniadirParticular() {
 	public static void listarVivienda() {
 
 		System.out.println("\nHa elegido la opción listar el contenido de vivienda");
-		System.out.println("****************************************************\n");
+		System.out.println("****************************************************");
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
