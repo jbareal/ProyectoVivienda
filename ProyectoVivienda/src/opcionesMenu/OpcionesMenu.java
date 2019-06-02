@@ -146,7 +146,7 @@ public static void aniadirParticular() {
 	String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");		
 	Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
 	Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
-	Integer numBaños = Teclado.pideDatoEntero("Introduzca el número de baños: ");
+	Integer numBanios = Teclado.pideDatoEntero("Introduzca el número de baños: ");
 	TpCAS tipoCASA = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
 	//controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
