@@ -280,7 +280,7 @@ public static void aniadirParticular() {
 					  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados: "));
 						break;
 					case 4:
-						 ((Particular)v).setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños: "));	
+						 ((Particular)v).setNumBanios(Teclado.pideDatoEntero("Introduzca el número de baños: "));	
 						break;
 					case 5:
 						//((Particular)v).setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa: "));
