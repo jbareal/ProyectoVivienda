@@ -138,15 +138,15 @@ public class OpcionesMenu {
 public static void aniadirParticular() {
 
 	System.out.println("\nIntroduzca los siguientes datos para la vivienda Particular");
-	System.out.println("*******************************************************");
+	System.out.println("**********************************************************");
 	String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");		
 	Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
 	Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
 	Integer numBaños = Teclado.pideDatoEntero("Introduzca el número de baños: ");
-	TpCAS tipoCasa = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
+	TpCAS tipoCASA = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
-	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCasa));
-	System.out.println(GestionLista.getLista());
+	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
+	listadoVivienda();
 }
 
 	public static void modificarVivienda() {
@@ -331,8 +331,8 @@ public static void aniadirParticular() {
 
 	public static void borrarVivienda() {
 
-		System.out.println("Has escogido borrar vivienda");
-		System.out.println("*************************");
+		System.out.println("\n Has escogido borrar vivienda");
+		System.out.println("******************************");
 		
 		listadoVivienda();
 		int num = Teclado.pideDatoEntero("Introduzca num de la vivienda a borrar: ");
@@ -341,8 +341,9 @@ public static void aniadirParticular() {
 
 	public static void listarVivienda() {
 
-		System.out.println("Has escogido listar el contenido de vivienda");
-		System.out.println("*************************");
+		System.out.println("\nHas escogido listar el contenido de vivienda");
+		System.out.println("*******************************************");
+		listadoVivienda();
 	}
 
 	public static void listadoVivienda() {
@@ -380,8 +381,8 @@ public static void aniadirParticular() {
 		if (v instanceof Particular) {
 			Particular t = (Particular) v;
 			System.out.println((++cont) + " Vivienda particular con [nº Catastro: " + t.getNumCatastro() + "," + " Superficie:  "
-						+ t.getSuperficie() + "metros cuadrados, nº de aires acondicionados: " + t.getNumAireAcond()
-						+ ", nº de baños:  " + t.getNumBaños()+ ", Tipo de casa: "+ t.getTipoCasa()+"]") ;
+						+ t.getSuperficie() + " metros cuadrados, nº de aires acondicionados: " + t.getNumAireAcond()
+						+ ", nº de baños:  " + t.getNumBaños()+ ", Tipo de casa: "+ t.getTipoCASA()+"]") ;
 			}
 		
 		
