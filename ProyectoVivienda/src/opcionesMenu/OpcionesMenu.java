@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import controlador.Comparador;
-import controlador.GestionLista;
 import hospedaje.Hotel;
 import hospedaje.Pension;
 import tipos.TpCAS;
@@ -19,7 +18,7 @@ public class OpcionesMenu {
 	
 	public static void escogerTipoVivienda() {
 		
-		System.out.println("\nHas elegido la opción de añadir vivienda");
+		System.out.println("\nHa elegido la opción de añadir vivienda");
 		System.out.println("****************************************");
 
 		System.out.println("\nElija el tipo de vivienda en el que desee realizar la acción");
@@ -28,6 +27,7 @@ public class OpcionesMenu {
 		System.out.println("2. Pensión.");
 		System.out.println("3. Vacacional.");
 		System.out.println("4. Particular.");
+		
 	}
 	
 
@@ -151,13 +151,13 @@ public static void aniadirParticular() {
 
 	public static void modificarVivienda() {
 		
-		System.out.println("Has escogido modificar vivienda");
-		System.out.println("*************************");
+		System.out.println("\nHa elegido la opción de modificar vivienda");
+		System.out.println("*******************************");
 		listadoVivienda();
 
 		for(Vivienda v : controlador.GestionLista.getLista()) {
 				
-			Teclado.pideDatoEntero("Introduzca num de la vivienda a modificar: ");	
+			Teclado.pideDatoEntero("Introduzca el nº de la vivienda a modificar: ");	
 							
 				if (v instanceof Hotel) {
 					System.out.println("Seleccione el atributo que desee modificar: ");
@@ -170,12 +170,12 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción escogida: ");
+					opcion = Teclado.pideDatoEntero("Opción elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >4) {
-						System.out.println("Debe escoger un número del 1 al 4.");
+						System.out.println("Debe elegir un número del 1 al 4.");
 					}else {
 					
 					   
@@ -185,7 +185,7 @@ public static void aniadirParticular() {
 					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
 						break;
 					case 2:
-					//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					// v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
 						break;
 					case 3:
 					//  v.setNumHabitaciones(Teclado.pideDatoEntero("Introuzca el nuevo número de habitaciones"));
@@ -212,12 +212,12 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción escogida: ");
+					opcion = Teclado.pideDatoEntero("Opción elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >4) {
-					System.out.println("Debe escoger un número del 1 al 4.");
+					System.out.println("Debe elegir un número del 1 al 4.");
 					}else {
 						
 					    
@@ -253,12 +253,12 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción escogida: ");
+					opcion = Teclado.pideDatoEntero("Opción elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >5) {
-					System.out.println("Debe escoger un número del 1 al 5.");
+					System.out.println("Debe elagir un número del 1 al 5.");
 					}else {
 						
 					   
@@ -295,12 +295,12 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 								
 					try {
-					    opcion = Teclado.pideDatoEntero("Opción escogida: ");
+					    opcion = Teclado.pideDatoEntero("Opción elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >5) {
-					System.out.println("Debe escoger un número del 1 al 5.");
+					System.out.println("Debe elegir un número del 1 al 5.");
 					}else {
 					
 					    
@@ -331,17 +331,17 @@ public static void aniadirParticular() {
 
 	public static void borrarVivienda() {
 
-		System.out.println("\n Has escogido borrar vivienda");
-		System.out.println("******************************");
+		System.out.println("\nHa elegido la opción borrar vivienda");
+		System.out.println("****************************** \n");
 		
 		listadoVivienda();
-		int num = Teclado.pideDatoEntero("Introduzca num de la vivienda a borrar: ");
+		int num = Teclado.pideDatoEntero("Introduzca el nº de la vivienda a borrar: ");
 		controlador.GestionLista.borrar(num);
 	}
 
 	public static void listarVivienda() {
 
-		System.out.println("\nHas escogido listar el contenido de vivienda");
+		System.out.println("\nHa elegido la opción listar el contenido de vivienda");
 		System.out.println("*******************************************");
 		listadoVivienda();
 	}

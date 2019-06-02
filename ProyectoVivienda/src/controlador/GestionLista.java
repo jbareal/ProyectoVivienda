@@ -10,6 +10,7 @@ public class GestionLista {
 
 	private static List<Vivienda> lstViviendas = new ArrayList<>();
 	
+	
 	public static void anadir(Vivienda v) {
 		lstViviendas.add(v);
 	}
