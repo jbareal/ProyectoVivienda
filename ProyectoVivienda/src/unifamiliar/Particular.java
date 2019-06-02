@@ -13,8 +13,8 @@ import unifamiliar.Unifamiliar;
  *
  */
 public class Particular extends Unifamiliar {
-	private Integer numBaños; 
-    private TpCAS tipoCASA; 
+	private Integer numBanios; 
+        private TpCAS tipoCASA; 
     
 		public Particular() {
 		super();
@@ -25,20 +25,20 @@ public class Particular extends Unifamiliar {
 		 * @param superficie
 		 * @param numAireAcond
 		 */
-		public Particular(String numCatastro, Integer superficie, Integer numAireAcond, Integer numBaños, TpCAS tipoCASA) {
+		public Particular(String numCatastro, Integer superficie, Integer numAireAcond, Integer numBanios, TpCAS tipoCASA) {
 			super(numCatastro, superficie, numAireAcond);
-			this.numBaños = numBaños;
+			this.numBanios = numBanios;
 			this.tipoCASA = tipoCASA;
 			
 			
 		}
 
-		public Integer getNumBaños() {
-			return numBaños;
+		public Integer getNumBanios() {
+			return numBanios;
 		}
 
-		public void setNumBaños(Integer numBaños) {
-			this.numBaños = numBaños;
+		public void setNumBanios(Integer numBanios) {
+			this.numBanios = numBanios;
 		}
 
 		public TpCAS getTipoCASA() {
@@ -54,7 +54,7 @@ public class Particular extends Unifamiliar {
 			
 			return "Unifamiliar [ numumeroCatastro= " + getNumCatastro()+ ", superficie=" + getSuperficie() + ", numAireAcond=" + getNumAireAcond() + 
 					
-			 ",  numBaños=" + getNumBaños()+ ", tipoCasa=" + getTipoCASA() + "]";
+			 ",  numBaÃ±os=" + getNumBanios()+ ", tipoCasa=" + getTipoCASA() + "]";
 		}
 	
 }
