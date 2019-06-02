@@ -19,10 +19,10 @@ public class OpcionesMenu {
 	public static void escogerTipoVivienda() {
 		
 		System.out.println("\nHa elegido la opción de añadir vivienda");
-		System.out.println("****************************************");
+		System.out.println("***************************************");
 
-		System.out.println("Elija el tipo de vivienda en el que desee realizar la acción");
-		System.out.println("************************************************************");
+		System.out.println("Elija el tipo de vivienda que desea añadir");
+		System.out.println("******************************************");
 		System.out.println("1. Hotel.");
 		System.out.println("2. Pensión.");
 		System.out.println("3. Vacacional.");
@@ -152,12 +152,15 @@ public static void aniadirParticular() {
 	public static void modificarVivienda() {
 		
 		System.out.println("\nHa elegido la opción de modificar vivienda");
-		System.out.println("*******************************\n");
+		System.out.println("******************************************");
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
 		for(Vivienda v : controlador.GestionLista.getLista()) {
 				
 			Teclado.pideDatoEntero("Introduzca el nº de la vivienda a modificar: ");	
+			
 							
 				if (v instanceof Hotel) {
 					System.out.println("Seleccione el atributo que desee modificar: ");
