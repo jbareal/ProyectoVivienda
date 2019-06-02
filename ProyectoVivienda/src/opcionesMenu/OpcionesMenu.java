@@ -150,7 +150,7 @@ public static void aniadirParticular() {
 	TpCAS tipoCASA = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
 	//controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
-	controlador.GestionLista.anadirParticular(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCasa));
+	controlador.GestionLista.anadirParticular(new Particular(numCatastro, superficie, numAireAcond, numBanios, tipoCasa));
 	listadoVivienda();
 }
 
