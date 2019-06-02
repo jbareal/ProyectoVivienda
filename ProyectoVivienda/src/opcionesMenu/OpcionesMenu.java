@@ -18,13 +18,13 @@ public class OpcionesMenu {
 	
 	public static void escogerTipoVivienda() {
 		
-		System.out.println("\nHa elegido la opción de añadir vivienda");
+		System.out.println("\nHa elegido la opciÃ³n de aÃ±adir vivienda");
 		System.out.println("***************************************");
 
-		System.out.println("Elija el tipo de vivienda que desea añadir");
+		System.out.println("Elija el tipo de vivienda que desea aÃ±adir");
 		System.out.println("******************************************");
 		System.out.println("1. Hotel.");
-		System.out.println("2. Pensión.");
+		System.out.println("2. PensiÃ³n.");
 		System.out.println("3. Vacacional.");
 		System.out.println("4. Particular.");
 		
@@ -38,12 +38,12 @@ public class OpcionesMenu {
 		Integer opcion = 0;
 		
 		try {
-		opcion = Teclado.pideDatoEntero("Opción escogida: ");
+		opcion = Teclado.pideDatoEntero("OpciÃ³n escogida: ");
 		}
 		catch(Exception e) {
 		}
 		if(opcion <1 || opcion >4) {
-			System.out.println("Debe escoger un número del 1 al 4.");
+			System.out.println("Debe escoger un nÃºmero del 1 al 4.");
 		}else {
 		
 }
@@ -69,16 +69,16 @@ public class OpcionesMenu {
 		
 		System.out.println("\nIntroduzca los siguientes datos para el Hotel");
 		System.out.println("*********************************************");
-		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
+		String numCatastro = Teclado.pideDatoCadena("Introduzca el nÂº de catastro: ");
 		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago: Tarjeta, Paypal, Efectivo, Todo: "));
 		
 		Integer numHabitaciones = 0;
 		do {
 		try {
-		numHabitaciones = Teclado.pideDatoEntero("Introduzca el nº de habitaciones: ");
+		numHabitaciones = Teclado.pideDatoEntero("Introduzca el nÂº de habitaciones: ");
 		
 		}catch (Exception e) {
-			System.out.println("Debe escribir un número. ");		
+			System.out.println("Debe escribir un nÃºmero. ");		
 		}
 		}while (numHabitaciones ==0);
 		
@@ -86,15 +86,15 @@ public class OpcionesMenu {
 		Integer numComedores = 0;
 		do {
 			try {
-				numComedores = Teclado.pideDatoEntero("Introduzca el nº de comedores: ");
+				numComedores = Teclado.pideDatoEntero("Introduzca el nÂº de comedores: ");
 			}catch (Exception e) {
-				System.out.println("Debe escribir un número. ");		
+				System.out.println("Debe escribir un nÃºmero. ");		
 			}
 			}while (numComedores ==0);
 		
 		
 
-		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual: "));
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la Ã©poca de uso: Verano, Invierno, Anual: "));
 
 		controlador.GestionLista.anadir(new Hotel(numCatastro, tipoPAGO, numHabitaciones, numComedores, tipoEPO));
 		listadoVivienda();
@@ -104,13 +104,13 @@ public class OpcionesMenu {
 
 	public static void aniadirPension() {
 
-		System.out.println("\nIntroduzca los siguientes datos para la Pensión");
+		System.out.println("\nIntroduzca los siguientes datos para la PensiÃ³n");
 		System.out.println("***********************************************");
-		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
+		String numCatastro = Teclado.pideDatoCadena("Introduzca el nÂº de catastro: ");
 		TpPAGO tipoPAGO = utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: "));
-		String opinionViajeros = Teclado.pideDatoCadena("Introduzca su opinión: ");
-		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca número de personas por habitación: ");
-		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual: "));
+		String opinionViajeros = Teclado.pideDatoCadena("Introduzca su opiniÃ³n: ");
+		Integer paxPorHabitacion = Teclado.pideDatoEntero("Introduzca nÃºmero de personas por habitaciÃ³n: ");
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la Ã©poca de uso: Verano, Invierno, Anual: "));
 		
 		controlador.GestionLista.anadir(new Pension(numCatastro, tipoPAGO, opinionViajeros, paxPorHabitacion, tipoEPO));
 		listadoVivienda();
@@ -121,12 +121,12 @@ public class OpcionesMenu {
 
 		System.out.println("\nIntroduzca los siguientes datos para la vivienda Vacacional");
 		System.out.println("***********************************************************");
-		String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");
+		String numCatastro = Teclado.pideDatoCadena("Introduzca el nÂº de catastro: ");
 		Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie, en metros: ");
-		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca el nº de aparatos de aire acondicionado: ");
-		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca los días de cocupación: ");
+		Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca el nÂº de aparatos de aire acondicionado: ");
+		Integer diasOcupado = Teclado.pideDatoEntero("Introduzca los dÃ­as de cocupaciÃ³n: ");
 		Integer distanciaPlaya = Teclado.pideDatoEntero("Introduzca la distacia a la playa, en metros: ");
-		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
+		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la Ã©poca de uso: Verano, Invierno, Anual "));
 				
 		controlador.GestionLista.anadir(new Vacacional(numCatastro, superficie, numAireAcond, diasOcupado,distanciaPlaya, tipoEPO ));
 		listadoVivienda();
@@ -139,19 +139,19 @@ public static void aniadirParticular() {
 
 	System.out.println("\nIntroduzca los siguientes datos para la vivienda Particular");
 	System.out.println("**********************************************************");
-	String numCatastro = Teclado.pideDatoCadena("Introduzca el nº de catastro: ");		
+	String numCatastro = Teclado.pideDatoCadena("Introduzca el nÂº de catastro: ");		
 	Integer superficie = Teclado.pideDatoEntero("Introduzca la superficie: ");
-	Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nº de aparatos de aire acondicionado: ");
-	Integer numBaños = Teclado.pideDatoEntero("Introduzca el número de baños: ");
+	Integer numAireAcond =  Teclado.pideDatoEntero("Introduzca nÂº de aparatos de aire acondicionado: ");
+	Integer numBaÃ±os = Teclado.pideDatoEntero("Introduzca el nÃºmero de baÃ±os: ");
 	TpCAS tipoCASA = utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: ADOSADO, PAREADO, PISO ")); 
 	
-	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaños, tipoCASA));
+	controlador.GestionLista.anadir(new Particular(numCatastro, superficie, numAireAcond, numBaÃ±os, tipoCASA));
 	listadoVivienda();
 }
 
 	public static void modificarVivienda() {
 		
-		System.out.println("\nHa elegido la opción de modificar vivienda");
+		System.out.println("\nHa elegido la opciÃ³n de modificar vivienda");
 		System.out.println("******************************************");
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
@@ -159,7 +159,7 @@ public static void aniadirParticular() {
 
 		for(Vivienda v : controlador.GestionLista.getLista()) {
 				
-			Teclado.pideDatoEntero("Introduzca el nº de la vivienda a modificar: ");	
+			Teclado.pideDatoEntero("Introduzca el nÂº de la vivienda a modificar: ");	
 			
 							
 				if (v instanceof Hotel) {
@@ -173,28 +173,28 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción elegida: ");
+					opcion = Teclado.pideDatoEntero("OpciÃ³n elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >4) {
-						System.out.println("Debe elegir un número del 1 al 4.");
+						System.out.println("Debe elegir un nÃºmero del 1 al 4.");
 					}else {
 					
 					   
 				
 					switch (opcion) {
 					case 1:
-					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nÂº de catastro: "));
 						break;
 					case 2:
-					// v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					// v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo mÃ©todo de pago: "));
 						break;
 					case 3:
-					//  v.setNumHabitaciones(Teclado.pideDatoEntero("Introuzca el nuevo número de habitaciones"));
+					//  v.setNumHabitaciones(Teclado.pideDatoEntero("Introuzca el nuevo nÃºmero de habitaciones"));
 						break;
 					case 4:
-					//  v.setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo número de habitaciones"));	
+					//  v.setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo nÃºmero de habitaciones"));	
 						break;
 					}					
 				     
@@ -210,33 +210,33 @@ public static void aniadirParticular() {
 					System.out.println("1. NumCatastro ");
 					System.out.println("2. TipoPAGO ");
 					System.out.println("3. OpinionViajeros ");
-					System.out.println("4. PaxPorHabitación ");
+					System.out.println("4. PaxPorHabitaciÃ³n ");
 						
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción elegida: ");
+					opcion = Teclado.pideDatoEntero("OpciÃ³n elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >4) {
-					System.out.println("Debe elegir un número del 1 al 4.");
+					System.out.println("Debe elegir un nÃºmero del 1 al 4.");
 					}else {
 						
 					    
 					
 					switch (opcion) {
 					case 1:
-					      v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					      v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nÂº de catastro: "));
 						break;
 					case 2:
-					//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo método de pago: "));
+					//  v.setTipoPAGO(Teclado.pideDatoCadena("Introduzca el neuvo mÃ©todo de pago: "));
 						break;
 					case 3:
-					//  v.setNumHabitaciones(Teclado.pideDatoCadena("Introuzca la opinión de los viajeros"));
+					//  v.setNumHabitaciones(Teclado.pideDatoCadena("Introuzca la opiniÃ³n de los viajeros"));
 						break;
 					case 4:
-					//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitación"));	
+					//  v.setNumComedores(Teclado.pideDatoCadena("Introduzca el nuevo tipo de PaxPorHabitaciÃ³n"));	
 						break;
 					}
 				}
@@ -250,34 +250,34 @@ public static void aniadirParticular() {
 					System.out.println("1. NumCatastro ");
 					System.out.println("2. Superficie ");
 					System.out.println("3. NumeAireAcond ");
-					System.out.println("4. NumBaños ");
+					System.out.println("4. NumBaÃ±os ");
 					System.out.println("5. TipoCasa ");
 						
 					Integer opcion = 0;
 					
 					try {
-					opcion = Teclado.pideDatoEntero("Opción elegida: ");
+					opcion = Teclado.pideDatoEntero("OpciÃ³n elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >5) {
-					System.out.println("Debe elagir un número del 1 al 5.");
+					System.out.println("Debe elagir un nÃºmero del 1 al 5.");
 					}else {
 						
 					   
 					
 					switch (opcion) {
 					case 1:
-				   	v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+				   	v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nÂº de catastro: "));
 					  break;
 					case 2:
 					// v.setSuperficie(Teclado.pideDatoCadena("Introduzca la superficie: "));
 					  break;
 					case 3:
-					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el nÃºmero de Aires Acondicionados"));
 					  break;
 					case 4:
-					//  v.setNumBaños(Teclado.pideDatoEntero("Introduzca el número de baños"));	
+					//  v.setNumBaÃ±os(Teclado.pideDatoEntero("Introduzca el nÃºmero de baÃ±os"));	
 					  break;
 					case 5:
 					//  v.setTipoCasa(Teclado.pideDatoCadena("Introduzca el tipo de casa"));
@@ -298,28 +298,28 @@ public static void aniadirParticular() {
 					Integer opcion = 0;
 								
 					try {
-					    opcion = Teclado.pideDatoEntero("Opción elegida: ");
+					    opcion = Teclado.pideDatoEntero("OpciÃ³n elegida: ");
 					}
 					catch(Exception e) {
 					}
 					if(opcion <1 || opcion >5) {
-					System.out.println("Debe elegir un número del 1 al 5.");
+					System.out.println("Debe elegir un nÃºmero del 1 al 5.");
 					}else {
 					
 					    
 							
 					switch (opcion) {
 					case 1:
-					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+					v.setNumCatastro(Teclado.pideDatoCadena("Introduzca el nÂº de catastro: "));
 					break;
 					case 2:
 					//  v.setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
 					break;
 					case 3:
-					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el número de Aires Acondicionados"));
+					//  v.setNumAireAcond(Teclado.pideDatoEntero("Introuzca el nÃºmero de Aires Acondicionados"));
 					break;
 					case 4:
-					//  v.setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número dias ocupado"));	
+					//  v.setDiasOcupado(Teclado.pideDatoEntero("Introduzca el nÃºmero dias ocupado"));	
 					break;
 					case 5:
 					//  v.setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa"));
@@ -327,27 +327,28 @@ public static void aniadirParticular() {
 				}
 			}
 		}		
-				
-						
-		 }
+		else{
+		}	
+		listadoVivienda();				
+	 }
 	}
 
 	public static void borrarVivienda() {
 
-		System.out.println("\nHa elegido la opción borrar vivienda");
+		System.out.println("\nHa elegido la opciÃ³n borrar vivienda");
 		System.out.println("************************************");
 		
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		
-		int num = Teclado.pideDatoEntero("\nIntroduzca el nº de la vivienda a borrar: ");
+		int num = Teclado.pideDatoEntero("\nIntroduzca el nÂº de la vivienda a borrar: ");
 		controlador.GestionLista.borrar(num-1);
 	}
 
 	public static void listarVivienda() {
 
-		System.out.println("\nHa elegido la opción listar el contenido de vivienda");
+		System.out.println("\nHa elegido la opciÃ³n listar el contenido de vivienda");
 		System.out.println("****************************************************");
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
@@ -365,39 +366,66 @@ public static void aniadirParticular() {
 		for (Vivienda v : controlador.GestionLista.getLista()) {
 			if (v instanceof Hotel) {
 				Hotel h = (Hotel) v;
-				System.out.println((++cont) + " Hotel con [nº Catastro: " + h.getNumCatastro() + "," + " Pago con: "
-						+ h.getTipoPAGO() + ", nº habitaciones: " + h.getNumHabitaciones()
-						+ ", nº de comedores: " + h.getNumComedores()+ ", Para la época: "+ h.getEpoca()+"]");
+				System.out.println((++cont) + " Hotel con [nÂº Catastro: " + h.getNumCatastro() + "," + " Pago con: "
+						+ h.getTipoPAGO() + ", nÂº habitaciones: " + h.getNumHabitaciones()
+						+ ", nÂº de comedores: " + h.getNumComedores()+ ", Para la Ã©poca: "+ h.getEpoca()+"]");
 			}
 			
 			if (v instanceof Pension) {
 				Pension p = (Pension) v;
-				System.out.println((++cont) + " Pensión con [nº Catastro: " + p.getNumCatastro() + "," + " Pago con: "
-							+ p.getTipoPAGO() + ", Opinión de Viajeros: " + p.getOpinionViajeros()
-							+ ", nº de Personas por Habitación:  " + p.getPaxPorHabitacion()+ ", Para la época: "+ p.getEpoca()+"]") ;
+				System.out.println((++cont) + " PensiÃ³n con [nÂº Catastro: " + p.getNumCatastro() + "," + " Pago con: "
+							+ p.getTipoPAGO() + ", OpiniÃ³n de Viajeros: " + p.getOpinionViajeros()
+							+ ", nÂº de Personas por HabitaciÃ³n:  " + p.getPaxPorHabitacion()+ ", Para la Ã©poca: "+ p.getEpoca()+"]") ;
 				}
 			
 			
 					
 		if (v instanceof Vacacional) {
 			Vacacional c = (Vacacional) v;
-			System.out.println((++cont) + " Vivienda vacacional con [nº Catastro: " + c.getNumCatastro() + "," + " Superficie:  "
-						+ c.getSuperficie() + " metros cuadrados, nº de aires acondicionados: " + c.getNumAireAcond()
-						+ ", Días de ocupación:  " + c.getDiasOcupado()+ ", Distancia a la playa: "+ c.getDistanciaPlaya() + " metros, Para la época: " + c.getEpoca()+"]") ;
+			System.out.println((++cont) + " Vivienda vacacional con [nÂº Catastro: " + c.getNumCatastro() + "," + " Superficie:  "
+						+ c.getSuperficie() + " metros cuadrados, nÂº de aires acondicionados: " + c.getNumAireAcond()
+						+ ", DÃ­as de ocupaciÃ³n:  " + c.getDiasOcupado()+ ", Distancia a la playa: "+ c.getDistanciaPlaya() + " metros, Para la Ã©poca: " + c.getEpoca()+"]") ;
 			}
 		
 		if (v instanceof Particular) {
 			Particular t = (Particular) v;
-			System.out.println((++cont) + " Vivienda particular con [nº Catastro: " + t.getNumCatastro() + "," + " Superficie:  "
-						+ t.getSuperficie() + " metros cuadrados, nº de aires acondicionados: " + t.getNumAireAcond()
-						+ ", nº de baños:  " + t.getNumBaños()+ ", Tipo de casa: "+ t.getTipoCASA()+"]") ;
+			System.out.println((++cont) + " Vivienda particular con [nÂº Catastro: " + t.getNumCatastro() + "," + " Superficie:  "
+						+ t.getSuperficie() + " metros cuadrados, nÂº de aires acondicionados: " + t.getNumAireAcond()
+						+ ", nÂº de baÃ±os:  " + t.getNumBaÃ±os()+ ", Tipo de casa: "+ t.getTipoCASA()+"]") ;
 			}
 		
 		
 		
 		}
 	}
-
+public static List<Vivienda>getViviendasPorTipo(String tipo){
+	Stream<Vivienda> s = null;
+	List<Vivienda> list = GestionLista.getLista();
+	Collections.sort(list, (i1,i2) -> i1.getNumCatastro().compareTo(i2.getNumCatastro()));		
+			
+	switch(tipo.toUpperCase()){
+	   case "HOTELES":
+		s = list.stream().filter(p-> p instanceof Hotel);
+		break;
+			
+	   case "PENSIONES":
+	             s = list.stream().filter(p-> p instanceof Pension);
+		break;
+					
+		case "PARTICULAR":
+		    s = list.stream().filter(p-> p instanceof Particular);
+		break;
+		
+		case "VACACIONAL":
+		   s = list.stream().filter(p->p instanceof Vacacional);
+		break;
+		default:
+		   s = list.stream();
+	}
+					
+	return	s.collect(Collectors.toList());	
+    }	
+	
 }
 
 
