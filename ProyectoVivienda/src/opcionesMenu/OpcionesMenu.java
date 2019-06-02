@@ -128,7 +128,7 @@ public class OpcionesMenu {
 		Integer distanciaPlaya = Teclado.pideDatoEntero("Introduzca la distacia a la playa, en metros: ");
 		TpEPO tipoEPO = utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual "));
 				
-		controlador.GestionLista.anadir(new Vacacional(numCatastro, numAireAcond,superficie, diasOcupado,distanciaPlaya, tipoEPO ));
+		controlador.GestionLista.anadir(new Vacacional(numCatastro, superficie, numAireAcond, diasOcupado,distanciaPlaya, tipoEPO ));
 		listadoVivienda();
 		
 	}
@@ -285,7 +285,7 @@ public static void aniadirParticular() {
 			    	if (v instanceof Vacacional) {
 			    		
 			    	
-				        System.out.println("****************************************");
+				    System.out.println("****************************************");
 					System.out.println("1. NumCatastro ");
 					System.out.println("2. Superficie ");
 					System.out.println("3. NumeAireAcond ");
@@ -374,7 +374,7 @@ public static void aniadirParticular() {
 			Vacacional c = (Vacacional) v;
 			System.out.println((++cont) + " Vivienda vacacional con [nº Catastro: " + c.getNumCatastro() + "," + " Superficie:  "
 						+ c.getSuperficie() + " metros cuadrados, nº de aires acondicionados: " + c.getNumAireAcond()
-						+ ", Días de ocupación:  " + c.getDiasOcupado()+ ", Distancia a la playa: "+ c.getDistanciaPlaya() + ", Para la época: " + c.getEpoca()+"]") ;
+						+ ", Días de ocupación:  " + c.getDiasOcupado()+ ", Distancia a la playa: "+ c.getDistanciaPlaya() + " metros, Para la época: " + c.getEpoca()+"]") ;
 			}
 		
 		if (v instanceof Particular) {
