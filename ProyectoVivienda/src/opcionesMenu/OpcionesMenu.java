@@ -21,7 +21,7 @@ public class OpcionesMenu {
 		System.out.println("\nHa elegido la opción de añadir vivienda");
 		System.out.println("****************************************");
 
-		System.out.println("\nElija el tipo de vivienda en el que desee realizar la acción");
+		System.out.println("Elija el tipo de vivienda en el que desee realizar la acción");
 		System.out.println("************************************************************");
 		System.out.println("1. Hotel.");
 		System.out.println("2. Pensión.");
@@ -152,7 +152,7 @@ public static void aniadirParticular() {
 	public static void modificarVivienda() {
 		
 		System.out.println("\nHa elegido la opción de modificar vivienda");
-		System.out.println("*******************************");
+		System.out.println("*******************************\n");
 		listadoVivienda();
 
 		for(Vivienda v : controlador.GestionLista.getLista()) {
@@ -332,18 +332,23 @@ public static void aniadirParticular() {
 	public static void borrarVivienda() {
 
 		System.out.println("\nHa elegido la opción borrar vivienda");
-		System.out.println("****************************** \n");
+		System.out.println("************************************");
 		
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
-		int num = Teclado.pideDatoEntero("Introduzca el nº de la vivienda a borrar: ");
-		controlador.GestionLista.borrar(num);
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+		
+		int num = Teclado.pideDatoEntero("\nIntroduzca el nº de la vivienda a borrar: ");
+		controlador.GestionLista.borrar(num-1);
 	}
 
 	public static void listarVivienda() {
 
 		System.out.println("\nHa elegido la opción listar el contenido de vivienda");
-		System.out.println("*******************************************");
+		System.out.println("****************************************************\n");
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 	}
 
 	public static void listadoVivienda() {
