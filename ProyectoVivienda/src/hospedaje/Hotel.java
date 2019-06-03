@@ -49,13 +49,17 @@ public class Hotel extends Hospedaje implements Informacion {
 	public void setTipoEPO(TpEPO tipoEPO) {
 		this.tipoEPO = tipoEPO;
 	}
+	
+	public void setTpPAGOHospedaje(TpPAGO tipoPAGO) {
+		setTipoPAGO(tipoPAGO);
+	}
 
 	@Override
 	public String toString() {
 		return "Hotel [numHabitaciones=" + numHabitaciones + ", numComedores=" + numComedores + ", tipoEPO=" + tipoEPO
 				+ ", getNumHabitaciones()=" + getNumHabitaciones() + ", getNumComedores()="
 				+ getNumComedores() + ", getPrecioMedio()=" + getPrecioMedio() + ", getTipoEPO()=" + getTipoEPO()
-				+ ", getTipoPAGO()=" + getTipoPAGO() + ", getEpoca()=" + getEpoca() + "]";
+				+ ", getTipoPAGO()=" + getTipoPAGO()  + " getEpoca()=" + getEpoca() + "]";
 	}
 
 

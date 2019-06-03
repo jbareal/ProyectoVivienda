@@ -25,8 +25,8 @@ public class Pension extends Hospedaje implements Informacion {
 		return opinionViajeros;
 	}
 
-	public void setOpcionViajeros(String opcionViajeros) {
-		this.opinionViajeros = opcionViajeros;
+	public void setOpinionViajeros(String opinionViajeros) {
+		this.opinionViajeros = opinionViajeros;
 	}
 
 	public Integer getPaxPorHabitacion() {

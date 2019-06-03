@@ -8,28 +8,15 @@ import vivienda.Vivienda;
 
 public class GestionLista {
 	
-	public class GestionLista {
-	
-	
+
 	private static List<Vivienda> lstViviendas = new ArrayList<>();
-
 	
 	
-	public static void anadirVac1(Vacacional v) {
-		lstViviendas.add((Vacacional)v);
+	
+	public static void anadir(Vivienda viv) {
+		lstViviendas.add(viv);
 	}
 	
-	public static void anadirPension(Pension v) {
-		lstViviendas.add((Pension)v);
-	}
-
-	public static void anadirHotel(Hotel v) {
-		lstViviendas.add((Hotel)v);
-	}
-
-	public static void anadirParticular(Particular v) {
-		lstViviendas.add((Particular)v);
-	}
 
 	
 	public static Integer tamanio() {
