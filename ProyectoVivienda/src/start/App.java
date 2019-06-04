@@ -11,6 +11,12 @@ import unifamiliar.Vacacional;
 import utilidades.Teclado;
 
 public class App {
+	
+	/**
+	 * 
+	 * Método principal en el que al mostrar el Menú principal podremos elegir entre las opciones de añadir, modificar, borrar o listar una vivienda.
+	 * 
+	 */
 
 	public static void main(String[] args) {
 		
@@ -37,6 +43,13 @@ public class App {
 		System.out.println("Ha salido del programa");
 		
 	}
+	
+	/**
+	 * 
+	 * @param opcion
+	 * Método auxiliar al principal que llama a la ejecución de los métodos que van a realizar las acciones anteriores.
+	 * 
+	 */
 
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
@@ -54,6 +67,13 @@ public class App {
 			break;
 		}
 	}
+	
+	/**
+	 * 
+	 * 
+	 * Muestra en pantalla las opciones de añadir, modificar, borrar, listar viviendas y salir del programa.
+	 * 
+	 */
 
 	private static void mostrarMenu() {
 		

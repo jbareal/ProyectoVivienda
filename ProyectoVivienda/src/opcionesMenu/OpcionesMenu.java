@@ -16,8 +16,11 @@ import vivienda.Vivienda;
 
 public class OpcionesMenu {
 	
-
-
+/**
+ * 
+ * Este método es para elegir el tipo de vivienda que vamos a añadir.
+ * 
+ */
 	public static void aniadirVivienda() {
 
 		Integer opcion = 0;
@@ -58,6 +61,11 @@ public class OpcionesMenu {
 		}while (opcion ==0);
 		
 	}
+	/**
+	 * 
+	 * Añade un hotel a la lista de viviendas.
+	 * 
+	 */
 
 	public static void aniadirHotel() {
 		
@@ -109,7 +117,11 @@ public class OpcionesMenu {
 		
 		
 
-
+	/**
+	 * 
+	 * Añade una pensión a la lista de viviendas.
+	 * 
+	 */
 
 	public static void aniadirPension() {
 
@@ -151,6 +163,12 @@ public class OpcionesMenu {
 		System.out.println("Para ver el listado de viviendas pulse la opción 4 en el Menú Principal.");
 	
 	}
+	
+	/**
+	 * 
+	 * Añade una vivienda vacacional a la lista de viviendas.
+	 * 
+	 */
 	
 	public static void aniadirVacacional() {
 
@@ -208,7 +226,11 @@ public class OpcionesMenu {
 	}
 	
 
-
+	/**
+	 * 
+	 * Añade una vivienda particular a la lista de viviendas.
+	 * 
+	 */
 public static void aniadirParticular() {
 
 	System.out.println("\nIntroduzca los siguientes datos para la vivienda Particular");
@@ -255,6 +277,11 @@ public static void aniadirParticular() {
 	System.out.println("Para ver el listado de viviendas pulse la opción 4 en el Menú Principal.");
 }
 
+/**
+ * 
+ * Modifica una vivienda según el tipo de la lista de viviendas.
+ * 
+ */
 public static void modificarVivienda() {
 	
 	System.out.println("\nHa elegido la opción de modificar vivienda");
@@ -334,7 +361,6 @@ public static void modificarVivienda() {
 			
 			 
 			case 2:
-			  //for(Vivienda v : controlador.GestionLista.getLista()) {	 
 				 
 				    if (v instanceof Pension) {
 					System.out.println("Seleccione el atributo que desee modificar: ");
@@ -373,7 +399,6 @@ public static void modificarVivienda() {
 				}
 				   
 			  case 3:
-				  //for(Vivienda v : controlador.GestionLista.getLista()) {	   
 					  if (v instanceof Particular) {
 							
 						System.out.println("Seleccione el atributo que desee modificar: ");
@@ -413,7 +438,6 @@ public static void modificarVivienda() {
 					
 			  case 4:
 				  
-				 // for(Vivienda v : controlador.GestionLista.getLista()) {
 					  if (v instanceof Vacacional) {
 				   
 					  System.out.println("****************************************");
@@ -465,7 +489,11 @@ public static void modificarVivienda() {
 			
 }		
 		    	
-//listadoVivienda();	
+/**
+ * 
+ * Borra una vivienda de una posición de la lista de viviendas.
+ * 
+ */	
 
 	public static void borrarVivienda() {
 
@@ -497,15 +525,11 @@ public static void modificarVivienda() {
 	
 	
 	
-	
-	/*try {
-		opcion = Teclado.pideDatoEntero("Opción escogida: ");
-		}
-		catch(Exception e) {
-		}
-		if(opcion <1 || opcion >4) {
-			System.out.println("Debe escoger un número del 1 al 4.");
-		}else {*/ 
+	/**
+	 * 
+	 * Imprime la lista de viviendas.
+	 * 
+	 */
 	
 	public static void listarVivienda() {
 
@@ -521,6 +545,11 @@ public static void modificarVivienda() {
 		}
 	}
 
+	/**
+	 * 
+	 * Usa un comparador para ordenar la lista de viviendas.
+	 * 
+	 */
 
 	public static void listadoVivienda() {
 		
@@ -567,39 +596,7 @@ public static void modificarVivienda() {
 	}
 }
 
-// ver cuando modificamos tipo de pago porque el problema es que es de la clase hospedaje
 
-/*
-
-public static List<Vivienda>getViviendasPorTipo(String tipo){
-	Stream<Vivienda> v = null;
-	List<Vivienda> list = GestionLista.getLista();
-	Collections.sort(list, (i1,i2) -> i1.getNumCatastro().compareTo(i2.getNumCatastro()));		
-			
-	switch(tipo.toUpperCase()){
-	   case "HOTELES":
-		v = list.stream().filter(p-> p instanceof Hotel);
-		break;
-			
-	   case "PENSIONES":
-	         v = list.stream().filter(p-> p instanceof Pension);
-		break;
-					
-	   case "PARTICULAR":
-		  v = list.stream().filter(p-> p instanceof Particular);
-		break;
-	
-	   case "VACACIONAL":
-		   v = list.stream().filter(p->p instanceof Vacacional);
-		break;
-		default:
-		   v = list.stream();
-	}
-					
-	return	v.collect(Collectors.toList());	
-    }	
-	
-	*/
 
 
 

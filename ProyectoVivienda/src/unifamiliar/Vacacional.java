@@ -5,10 +5,7 @@ import interfaces.Informacion;
 import tipos.TpEPO;
 import unifamiliar.Unifamiliar;
 
-/**
- * @author JUAN
- *
- */
+
 
 public class Vacacional extends Unifamiliar implements Informacion{
     
@@ -24,8 +21,6 @@ public class Vacacional extends Unifamiliar implements Informacion{
 	 * @param numCatastro
 	 * @param superficie
 	 * @param numAireAcond
-	 */
-	/**
 	 * @param diasOcupado
 	 * @param distanciaPlaya
 	 */

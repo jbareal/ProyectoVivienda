@@ -1,16 +1,11 @@
 package vivienda;
 
-/**
- * @author JUAN
- *
- */
+
 
 public class Vivienda {
 	private String numCatastro;
 
-	/**
-	 * 
-	 */
+	
 	public Vivienda() {
 	}
 

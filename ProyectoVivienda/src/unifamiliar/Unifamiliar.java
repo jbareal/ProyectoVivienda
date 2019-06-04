@@ -1,29 +1,24 @@
 package unifamiliar;
 
-/**
- * 
- */
-
 
 import vivienda.Vivienda;
 
-/**
- * @author JUAN
- *
- */
+
 public class Unifamiliar extends Vivienda {
 	private Integer superficie;
 	private Integer numAireAcond; 
 
-	/**
-	 * 
-	 */
+	
 	public Unifamiliar() {
 		super();
 	}
 
 	/**
 	 * @param numCatastro
+	 * @param superficie
+	 * @param numAireAcond
+	 * 
+	 * 
 	 */
 	public Unifamiliar(String numCatastro, Integer superficie, Integer numAireAcond) {
 		super(numCatastro);

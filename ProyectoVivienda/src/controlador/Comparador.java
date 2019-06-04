@@ -10,6 +10,11 @@ import vivienda.Vivienda;
 
 public class Comparador implements Comparator <Vivienda> {
 	
+	/**
+	 * Establece el orden en el que se imprimirá la lista de viviendas.
+	 * 
+	 */
+	
 	public int compare(Vivienda v1, Vivienda v2) {
 		int res = 0;
 		int valorV1 = 0;
