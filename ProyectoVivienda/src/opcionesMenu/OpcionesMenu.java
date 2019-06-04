@@ -501,7 +501,7 @@ public static void modificarVivienda() {
 		System.out.println("************************************");
 		
 		if(GestionLista.tamanio()==0) {
-			System.out.println("La lista de viviendas está vacia");
+			System.out.println("\nLa lista de viviendas está vacia");
 		}else {
 			System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 			listadoVivienda();
@@ -517,7 +517,7 @@ public static void modificarVivienda() {
 			}else {	
 			
 			controlador.GestionLista.borrar(num-1);
-			System.out.println("Ha borrado la vivienda nº: "+num);	
+			System.out.println("\nHa borrado la vivienda nº: "+num);	
 			System.out.println("Para ver el listado de viviendas pulse la opción 4 en el Menú Principal.");
 			}
 		}
@@ -537,7 +537,7 @@ public static void modificarVivienda() {
 		System.out.println("****************************************************");
 		
 		if(GestionLista.tamanio()==0) {
-			System.out.println("La lista de viviendas está vacia");
+			System.out.println("\nLa lista de viviendas está vacia");
 		}else {
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 		listadoVivienda();
