@@ -34,6 +34,12 @@ public class GestionLista {
 	  return lstViviendas; 
   }
 
+
+
+public static Vivienda get(int pos) {
+	return lstViviendas.get(pos);
+}
+
   /*
    public static List<Vivienda>getViviendasPorTipo(String tipo){
 		Stream<Vivienda> v = null;

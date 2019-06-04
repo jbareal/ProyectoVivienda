@@ -255,64 +255,88 @@ public static void aniadirParticular() {
 	System.out.println("Para ver el listado de viviendas pulse la opción 4 en el Menú Principal.");
 }
 
-	public static void modificarVivienda() {
-		
-		System.out.println("\nHa elegido la opción de modificar vivienda");
-		System.out.println("******************************************");
-		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-		listadoVivienda();
-		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-		
-		
-		for(Vivienda v : controlador.GestionLista.getLista()) {
-				
-			Teclado.pideDatoEntero("Introduzca el nº de la vivienda a modificar: ");	
+public static void modificarVivienda() {
+	
+	System.out.println("\nHa elegido la opción de modificar vivienda");
+	System.out.println("******************************************");
+	System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+	listadoVivienda();
+	System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+	
 			
-							
-				if (v instanceof Hotel) {
-					System.out.println("Seleccione el atributo que desee modificar: ");
-					System.out.println("****************************************");
-					System.out.println("1. Número de catastro ");
-					System.out.println("2. Tipo de pago ");
-					System.out.println("3. Número de habitaciones ");
-					System.out.println("4. Número de comedores ");
-					System.out.println("5. Época");
-					
-					Integer opcionH = 0;
-					
-					try {
-					opcionH = Teclado.pideDatoEntero("Opción elegida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcionH <1 || opcionH >5) {
-						System.out.println("Debe elegir un número del 1 al 5.");
-					}else {
-					
-					switch (opcionH) {
-				case 1:
-					((Hotel)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-					break;
-				case 2:
-				    ((Hotel)v).setTpPAGOHospedaje(utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: ")));
-					break;
-				case 3:
-				   ((Hotel)v).setNumHabitaciones(Teclado.pideDatoEntero("Introduzca el nuevo nÃºmero de habitaciones: "));
-					break;
-				case 4:
-				  ((Hotel)v).setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo número de comedores: "));	
-					break;
-				case 5:
-				  ((Hotel)v).setTipoEPO(utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual ")));	
-					break;
-			     	}	      
-				  }
-				}
+	if (GestionLista.tamanio()==0){
+		
+		System.out.println("La lista no está vacia");
+	}else {
+		//listadoVivienda();
+		int option=0;
+		
+		try {
+			option = Teclado.pideDatoEntero("Introduzca el nº de la vivienda a modificar: ");
+			}catch (Exception e) {
 				
-				
-				if (v instanceof Pension) {
+			}
+		   if (option < 1 || option > GestionLista.tamanio()) {
+			   System.out.println("Debe elegir un elemento de la lista");
+		   }else {
+		     
+			  option--;
+			  Vivienda v = controlador.GestionLista.get(option);
+		  
+		  
+		  switch (option) {
+		  case 1:
+		         				 
+									
+					
+			if (v instanceof Hotel) {
+					
+				System.out.println("Seleccione el atributo que desee modificar: ");
+				System.out.println("****************************************");
+				System.out.println("1. Número de catastro ");
+				System.out.println("2. Tipo de pago ");
+				System.out.println("3. Número de habitaciones ");
+				System.out.println("4. Número de comedores ");
+				System.out.println("5. Época");
 						
-					
+											
+					String opcionH;
+					opcionH = Teclado.pideDatoCadena("Opción elegida: ");
+					switch (opcionH) {
+					case "1":
+						if (v instanceof Hotel)
+						((Hotel)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+						break;
+					case "2":
+						if (v instanceof Hotel)
+					    ((Hotel)v).setTpPAGOHospedaje(utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: ")));
+						break;
+					case "3":
+						if (v instanceof Hotel)
+					   ((Hotel)v).setNumHabitaciones(Teclado.pideDatoEntero("Introduzca el nuevo numero de habitaciones: "));
+						break;
+					case "4":
+						if (v instanceof Hotel)
+					  ((Hotel)v).setNumComedores(Teclado.pideDatoEntero("Introduzca el nuevo número de comedores: "));	
+						break;
+					case "5":
+						if (v instanceof Hotel)
+					  ((Hotel)v).setTipoEPO(utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual ")));	
+						break;
+					default:
+			            System.out.println("error");	
+			            break;		
+						
+				   	}	      
+			}
+			
+				    
+			
+			 
+			case 2:
+			  //for(Vivienda v : controlador.GestionLista.getLista()) {	 
+				 
+				    if (v instanceof Pension) {
 					System.out.println("Seleccione el atributo que desee modificar: ");
 					System.out.println("****************************************");
 					System.out.println("1. Número de catastro ");
@@ -320,135 +344,128 @@ public static void aniadirParticular() {
 					System.out.println("3. Opinion de viajeros ");
 					System.out.println("4. Personas por habitación ");
 					System.out.println("5. Época");
-						
-					Integer opcionP = 0;
+							
+					String opcionP; 
+					opcionP = Teclado.pideDatoCadena("Opción elegida: ");
 					
-					try {
-					opcionP = Teclado.pideDatoEntero("Opción elegida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcionP <1 || opcionP >4) {
-					System.out.println("Debe elegir un nÃºmero del 1 al 5.");
-					}else {
-						
 					switch (opcionP) {
-					case 1:
+					case "1":
 						((Pension)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
 						break;
-					case 2:
+					case "2":
 					  ((Pension)v).setTipoPAGO(utilidades.ConvertirTipo.toTpPAGO(Teclado.pideDatoCadena("Introduzca el tipo de pago posible: Tarjeta, Paypal, Efectivo, Todo: ")));
 						break;
-					case 3:
+					case "3":
 					    ((Pension)v).setOpinionViajeros(Teclado.pideDatoCadena("Introduzca la opinión de los viajeros: "));
 						break;
-					case 4:
+					case "4":
 						((Pension)v).setPaxPorHabitacion(Teclado.pideDatoEntero("Introduzca el nuevo número de personas por habitación: "));	
 						break;
-					case 5:
+					case "5":
 				        ((Pension)v).setEpoca(utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual ")));	
-					      break;
-					}    
+					     break;
+					     
+					default:
+			            System.out.println("error");	
+			            break;   
+					}   
+					
 				}
-				}
-			
-					
-				if (v instanceof Particular) {
-						
-					
-					System.out.println("Seleccione el atributo que desee modificar: ");
-					System.out.println("****************************************");
-					System.out.println("1. Número de catastro ");
-					System.out.println("2. Superficie ");
-					System.out.println("3. Nº de aires acondicionados ");
-					System.out.println("4. Número de baños ");
-					System.out.println("5. Tipo de casa ");
-						
-					Integer opcion = 0;
-					
-					try {
-					opcion = Teclado.pideDatoEntero("Opción elegida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcion <1 || opcion >5) {
-					System.out.println("Debe elegir un número del 1 al 5.");
-					}else {
-						
-					switch (opcion) {
-					case 1:
-						((Particular)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-						break;
-					case 2:
-					  ((Particular)v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
-						break;
-					case 3:
-					  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introduzca el número de aires acondicionados: "));
-						break;
-					case 4:
-						 ((Particular)v).setNumBanos(Teclado.pideDatoEntero("Introduzca el número de baños: "));	
-						break;
-					case 5:
-						((Particular)v).setTipoCASA(utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: Adosado, Pareado, Piso ")));
-						break;
-				}	   
-					
+				   
+			  case 3:
+				  //for(Vivienda v : controlador.GestionLista.getLista()) {	   
+					  if (v instanceof Particular) {
 							
-			    }
-			}	
-			    	if (v instanceof Vacacional) {
-			    		
-			    	
-				    System.out.println("****************************************");
-					System.out.println("1. Número de catastro ");
-					System.out.println("2. Superficie ");
-					System.out.println("3. Número de aires acondicionados  ");
-					System.out.println("4. Días Ocupado ");
-					System.out.println("5. Distancia a la playa ");
-					System.out.println("6. Época");
+						System.out.println("Seleccione el atributo que desee modificar: ");
+						System.out.println("****************************************");
+						System.out.println("1. Número de catastro ");
+						System.out.println("2. Superficie ");
+						System.out.println("3. Nº de aires acondicionados ");
+						System.out.println("4. Número de baños ");
+						System.out.println("5. Tipo de casa ");
 								
-					Integer opcionV = 0;
-								
-					try {
-						opcionV = Teclado.pideDatoEntero("Opción elegida: ");
-					}
-					catch(Exception e) {
-					}
-					if(opcionV <1 || opcionV >6) {
-					System.out.println("Debe elegir un número del 1 al 6.");
-					}else {
+						String opcion;
+						opcion = Teclado.pideDatoCadena("Opción elegida: ");
+		     
+						switch (opcion) {
+						case "1":
+							((Particular)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+							break;
+						case "2":
+						  ((Particular)v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
+							break;
+						case "3":
+						  ((Particular)v).setNumAireAcond(Teclado.pideDatoEntero("Introduzca el número de aires acondicionados: "));
+							break;
+						case "4":
+							 ((Particular)v).setNumBanos(Teclado.pideDatoEntero("Introduzca el número de baños: "));	
+							break;
+						case "5":
+							((Particular)v).setTipoCASA(utilidades.ConvertirTipo.toTpCAS(Teclado.pideDatoCadena("Introduzca el tipo de casa: Adosado, Pareado, Piso ")));
+							break;
+						default:
+				            System.out.println("error");	
+				            break;	
+					}	
+						
+				  }
+					 
 					
-					switch (opcionV) {
-					case 1:
-					((Vacacional)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
-					     break;
-					case 2:
-				        ((Vacacional) v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
-					     break;
-					case 3:
-					((Vacacional) v).setNumAireAcond(Teclado.pideDatoEntero("Introduzca el número de Aires Acondicionados: "));
-					      break;
-					case 4:
-					 ((Vacacional)v).setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número de dias ocupado: "));	
-					break;
-					case 5:
-					 ((Vacacional)v).setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa: "));
-					break;
-					case 6:
-				        ((Vacacional)v).setTipoEPO(utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual ")));	
-					      break;
-			       }    		
-			}
-		}
-			
-			    	
-		else{
-		}	
-			    	
-		listadoVivienda();				
-	 }
-			
+			  case 4:
+				  
+				 // for(Vivienda v : controlador.GestionLista.getLista()) {
+					  if (v instanceof Vacacional) {
+				   
+					  System.out.println("****************************************");
+					  System.out.println("1. Número de catastro ");
+					  System.out.println("2. Superficie ");
+					  System.out.println("3. Número de aires acondicionados  ");
+					  System.out.println("4. Días Ocupado ");
+					  System.out.println("5. Distancia a la playa ");
+					  System.out.println("6. Época");
+										
+					  String opcionV;	
+					  opcionV = Teclado.pideDatoCadena("Opción elegida: ");
+		
+					  switch (opcionV) {
+						case "1":
+						((Vacacional)v).setNumCatastro(Teclado.pideDatoCadena("Introduzca el nº de catastro: "));
+						     break;
+						case "2":
+					        ((Vacacional) v).setSuperficie(Teclado.pideDatoEntero("Introduzca la superficie: "));
+						     break;
+						case "3":
+						((Vacacional) v).setNumAireAcond(Teclado.pideDatoEntero("Introduzca el número de Aires Acondicionados: "));
+						      break;
+						case "4":
+						 ((Vacacional)v).setDiasOcupado(Teclado.pideDatoEntero("Introduzca el número de dias ocupado: "));	
+						break;
+						case "5":
+						 ((Vacacional)v).setDistanciaPlaya(Teclado.pideDatoEntero("Introduzca la distancia a la playa: "));
+						break;
+						case "6":
+					        ((Vacacional)v).setTipoEPO(utilidades.ConvertirTipo.toTpEPO(Teclado.pideDatoCadena("Introduzca la época de uso: Verano, Invierno, Anual ")));	
+						      break;
+				        default:
+				            System.out.println("error");	
+				            break;
+					  }	
+				
+				  }
+					  break;
+			  default: 
+				  System.out.println("salir");
+				  
+		     }   
+            
+           	 
+		   }
 	}
+	   	
+			
+}		
+		    	
+//listadoVivienda();	
 
 	public static void borrarVivienda() {
 
