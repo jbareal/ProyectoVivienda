@@ -464,6 +464,7 @@ public static void aniadirParticular() {
 			int num=0;
 			try {
 			num = Teclado.pideDatoEntero("\nIntroduzca el nº de la vivienda a borrar: ");
+			System.out.println("**********************************************");
 			}catch(Exception e) {
 			}
 			if(num<1 || num>GestionLista.tamanio()) {
@@ -471,7 +472,8 @@ public static void aniadirParticular() {
 			}else {	
 			
 			controlador.GestionLista.borrar(num-1);
-			listadoVivienda();
+			System.out.println("Ha borrado la vivienda nº: "+num);	
+			System.out.println("Para ver el listado de viviendas pulse la opción 4 en el Menú Principal.");
 			}
 		}
 	}
