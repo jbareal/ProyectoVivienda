@@ -13,8 +13,9 @@ import utilidades.Teclado;
 public class App {
 	
 	/**
-	 * @param args
 	 * Método principal en el que al mostrar el Menú principal podremos elegir entre las opciones de añadir, modificar, borrar o listar una vivienda.
+	 * @param args
+	 * 
 	 * 
 	 */
 
@@ -46,9 +47,9 @@ public class App {
 	}
 	
 	/**
-	 * 
-	 * @param opcion
 	 * Método auxiliar al principal que llama a la ejecución de los métodos que van a realizar las acciones anteriores.
+	 * @param opcion
+	 * 
 	 * 
 	 */
 

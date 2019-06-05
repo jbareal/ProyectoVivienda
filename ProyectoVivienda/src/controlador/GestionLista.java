@@ -32,8 +32,9 @@ public class GestionLista {
 	}
 	
 	/**
-	 * @param pos
 	 * Borra una vivienda en una posición determinada de la lista.
+	 * @param pos
+	 * 
 	 * 
 	 */
 	
@@ -52,8 +53,9 @@ public class GestionLista {
   }
 
   /**
+   * Devuelve una posición determinada de la lista.
 	 * @return Vivienda
-	 * Devuelve una posición determinada de la lista.
+	 * 
 	 * 
 	 */
 

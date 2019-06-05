@@ -7,9 +7,9 @@ import tipos.TpPAGO;
 public class ConvertirTipo {
 	
 	/**
-	 * @param num
-	 * @return TpPAGO
 	 * Introducido un valor numérico asociado a un método de pago, lo convierte en un tipo de tipo de pago.
+	 * @param num Parámetro numérico
+	 * @return TpPAGO Tipo de pago escogido
 	 * 
 	 */
 
@@ -25,9 +25,10 @@ public class ConvertirTipo {
 	}
 
 	/**
-	 * @param str
-	 * @return TpPAGO
 	 * Introducida una cadena asociado a un método de pago, lo convierte en un tipo de tipo de pago.
+	 * @param str Cadena de caracteres
+	 * @return TpPAGO Tipo de pago escogido
+	 *
 	 * 
 	 */
 	public static TpPAGO toTpPAGO(String str) {
@@ -42,9 +43,10 @@ public class ConvertirTipo {
 	}
 	
 	/**
-	 * @param str
-	 * @return TpCAS
 	 * Introducida una cadena asociada a un tipo de casa, lo convierte en un tipo de tipo de casa.
+	 * @param str Cadena de caracteres
+	 * @return TpCAS Tipo de casa escogido
+	 * 
 	 * 
 	 */
 	
@@ -60,9 +62,10 @@ public class ConvertirTipo {
 	}
 	
 	/**
-	 * @param num
-	 * @return TpEPO
 	 * Introducido un valor numérico asociado a un tipo de época, lo convierte en un tipo de tipo de época.
+	 * @param num Parámetro numérico
+	 * @return TpEPO Tipo de época escogida
+	 * 
 	 * 
 	 */
 	
@@ -77,9 +80,10 @@ public class ConvertirTipo {
 	}
 	
 	/**
-	 * @param str
-	 * @return TpEPO
 	 * Introducida una cadena asociada a un tipo de época, lo convierte en un tipo de tipo de época.
+	 * @param str Cadena de caracteres
+	 * @return TpEPO Tipo de época escogida
+	 * 
 	 * 
 	 */
 	
