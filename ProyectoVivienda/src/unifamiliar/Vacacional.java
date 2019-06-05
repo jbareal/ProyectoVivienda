@@ -17,13 +17,7 @@ public class Vacacional extends Unifamiliar implements Informacion{
 		super();
 	}
 	
-	/**
-	 * @param numCatastro
-	 * @param superficie
-	 * @param numAireAcond
-	 * @param diasOcupado
-	 * @param distanciaPlaya
-	 */
+
 	
 	public Vacacional(String numCatastro, Integer superficie, Integer numAireAcond, Integer diasOcupado, Integer distanciaPlaya, TpEPO tipoEPO) {
 		super(numCatastro, superficie, numAireAcond);

@@ -9,9 +9,6 @@ public class Vivienda {
 	public Vivienda() {
 	}
 
-	/**
-	 * @param numCatastro
-	 */
 	public Vivienda(String numCatastro) {
 		this.numCatastro = numCatastro;
 	}

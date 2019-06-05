@@ -13,13 +13,7 @@ public class Unifamiliar extends Vivienda {
 		super();
 	}
 
-	/**
-	 * @param numCatastro
-	 * @param superficie
-	 * @param numAireAcond
-	 * 
-	 * 
-	 */
+	
 	public Unifamiliar(String numCatastro, Integer superficie, Integer numAireAcond) {
 		super(numCatastro);
 		setSuperficie(superficie);

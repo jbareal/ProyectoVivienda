@@ -17,14 +17,6 @@ public class Particular extends Unifamiliar {
 		super();
 	}
 
-		/**
-		 * @param numCatastro
-		 * @param superficie
-		 * @param numAireAcond
-		 * @param numBanos
-		 * @param tipoCASA
-		 * 
-		 */
 		public Particular(String numCatastro, Integer superficie, Integer numAireAcond, Integer numBanos, TpCAS tipoCASA) {
 			super(numCatastro, superficie, numAireAcond);
 			this.numBanos = numBanos;

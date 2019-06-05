@@ -9,11 +9,7 @@ public abstract class Hospedaje extends Vivienda {
 
 	public Hospedaje() {
 	}
-	/**
-	 * @param numCatastro
-	 * @param tipoPAGO
-	 * 
-	 */
+	
 
 	public Hospedaje(String numCatastro, TpPAGO tipoPAGO) {
 		super(numCatastro);

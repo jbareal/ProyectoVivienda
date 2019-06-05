@@ -42,7 +42,7 @@ public class GestionLista {
 	      
    }	
    /**
-	 * @return List<Vivienda>
+	 *
 	 * Devuelve la lista de viviendas.
 	 * 
 	 */
@@ -52,7 +52,7 @@ public class GestionLista {
   }
 
   /**
-	 * @param pos
+	 * @return Vivienda
 	 * Devuelve una posición determinada de la lista.
 	 * 
 	 */
