@@ -18,6 +18,7 @@ public class App {
 	 * 
 	 */
 
+	
 	public static void main(String[] args) {
 		
 		controlador.GestionLista.anadir(new Hotel("189AR", TpPAGO.TODO, 3,2,TpEPO.ANUAL));
